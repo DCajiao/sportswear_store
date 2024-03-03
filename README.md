@@ -10,7 +10,7 @@
 
 ---
 
-Redirección al PDF aquí
+[Información sobre el proyecto](https://github.com/DCajiao/sportswear_store/blob/main/Proyecto%20de%20Curso%20-%20Almacenamiento%20de%20Datos.pdf)
 
 ---
 
