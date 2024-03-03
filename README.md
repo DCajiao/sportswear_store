@@ -50,14 +50,14 @@ Este repositorio contiene el diseño del backend, centrado primordialmente en la
 
 ## 🗂️ MER
 
-<img src="https://raw.githubusercontent.com/DCajiao/sportswear_store/29876b05ff73c8bbae4466bb57227de4a594df52/images/MER.svg?token=A5OJHELQIGGHXB74E45FXG3F4TE3W" alt="MER-diagrama-svg" width="auto"/>
+![MER-diagrama-png](https://github.com/DCajiao/sportswear_store/blob/main/images/MER.png?raw=true)
 
 - [Diagrama completo](https://drive.google.com/file/d/1OhrWwU322MSNL48Lc3sZaY-cKv6n9IXW/view)
 
 
 ## 🧩 MR
 
-![MR-diagrama-svg](url)
+![MR-diagrama-png](https://github.com/DCajiao/sportswear_store/blob/main/images/MR.png?raw=true)
 
 - [Diagrama completo](https://drive.google.com/file/d/1OhrWwU322MSNL48Lc3sZaY-cKv6n9IXW/view)
 
