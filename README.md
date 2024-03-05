@@ -59,17 +59,18 @@ Este repositorio contiene el diseño del backend, centrado primordialmente en la
 
 ![MR-diagrama-png](https://github.com/DCajiao/sportswear_store/blob/main/images/MR.png?raw=true)
 
+- [MR-Script](https://drive.google.com/file/d/1q_vPc61-xCk3I9VxJdD0yMcix2lhb_Ua/view?usp=drive_link)
 - [Diagrama completo](https://drive.google.com/file/d/1OhrWwU322MSNL48Lc3sZaY-cKv6n9IXW/view)
 
 
 ## 📝 Script:
 
-[Archivo SQL](https://github.com/DCajiao/sportswear_store/blob/main/sql/init.sql)
+[Archivo SQL](https://github.com/DCajiao/sportswear_store/blob/main/sql/Scrip_sportswear_store.sql)
 
 
 ## 🚀 Próximamente …
 
-- Implementación de db nosql.
+- Implementación de db NoSQL.
 - Dockerización.
 - Despliegue en Cloud Computing.
 - ...
