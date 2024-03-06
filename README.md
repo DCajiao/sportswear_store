@@ -70,6 +70,35 @@ Este repositorio contiene el diseño del backend, centrado primordialmente en la
     | Producto | Seccion  | 'Hombre', 'Mujer', 'Niño'         |
 
 
+## 📊 Query's 
+1. ¿Cuál es el producto más vendido?
+
+2. ¿Cuál son las reseñas de los calcetines?
+
+3. ¿Cuál es el lugar que ha recibido más envíos?
+
+4. ¿Cuál es la fecha en la que más se han hecho compras?
+
+5. ¿Cuál es la sección en la que se venden más productos?
+
+6. ¿Cuáles productos están en el paquete 3?
+
+7. ¿Cuántos productos de tipo artículo tiene la tienda?
+
+8. ¿Cuál es el producto con el precio más alto?
+
+9. ¿Cuál es el promedio de valoraciones de los productos por tipo?
+
+10. ¿Cuál es el monto total de ventas por mes de cada año?
+
+11. ¿Cuál es el promedio de edad de los clientes por género?
+
+12. ¿Cuántos clientes han dejado reseñas y cuál es la valoración promedio que han dado?
+
+13. ¿Cuál es el cliente que ha realizado la compra más cara en términos de costo total?
+
+14. ¿Cuál es la sección con el precio promedio más alto por artículo vendido?
+
 
 ## 📝 Scripts:
 
