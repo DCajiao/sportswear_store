@@ -1,4 +1,4 @@
--- pendiente a nueva dataINSERT INTO Cuenta (Usuario, Tipo, Contraseña) VALUES
+INSERT INTO Cuenta (Usuario, Tipo, Contraseña) VALUES
 ('juan_perez', 'Administrador', 'P3r3z#2024'),
 ('Maria_gonzalez', 'Cliente', 'G0nz@lez21'),
 ('Pedro_ruiz12', 'Cliente', 'Ruiz_2024'),
