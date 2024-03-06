@@ -50,14 +50,14 @@ Este repositorio contiene el diseño del backend, centrado primordialmente en la
 
 ## 🗂️ MER
 
-![MER-diagrama-png](https://github.com/DCajiao/sportswear_store/blob/main/images/MER.png?raw=true)
+![MER-diagrama-png](https://github.com/DCajiao/sportswear_store/blob/main/db_diagrams/MER.png?raw=true)
 
 - [Diagrama completo](https://drive.google.com/file/d/1OhrWwU322MSNL48Lc3sZaY-cKv6n9IXW/view)
 
 
 ## 🧩 MR
 
-![MR-diagrama-png](https://github.com/DCajiao/sportswear_store/blob/main/images/MR.png?raw=true)
+![MR-diagrama-png](https://github.com/DCajiao/sportswear_store/blob/main/db_diagrams/MR.png?raw=true)
 
 - [Diagrama Completo](https://drive.google.com/file/d/18cunQ3gYTccL-rEyEJTIVkVz7Fbsw2J3/view?usp=sharing)
 
@@ -73,11 +73,11 @@ Este repositorio contiene el diseño del backend, centrado primordialmente en la
 
 ## 📝 Scripts:
 
-[Archivo SQL db](https://github.com/DCajiao/sportswear_store/blob/main/scrip/init.sql)
+[Archivo SQL db](https://github.com/DCajiao/sportswear_store/blob/main/script/init.sql)
 
-[Archivo SQL data](https://github.com/DCajiao/sportswear_store/blob/main/scrip/data.sql)
+[Archivo SQL data](https://github.com/DCajiao/sportswear_store/blob/main/script/data.sql)
 
-[Archivo SQL querys](https://github.com/DCajiao/sportswear_store/blob/main/scrip/query.sql)
+[Archivo SQL querys](https://github.com/DCajiao/sportswear_store/blob/main/script/query.sql)
 
 ## 🚀 Próximamente …
 
