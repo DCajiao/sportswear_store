@@ -71,8 +71,8 @@ Este repositorio contiene el diseño del backend, centrado primordialmente en la
 
 ## 📝 Scripts:
 
-[Archivo SQL MR](https://github.com/DCajiao/sportswear_store/blob/main/sql/Scrip_sportswear_store.sql)
-[Archivo SQL Data](https://github.com/DCajiao/sportswear_store/blob/main/sql/Scrip_datos.sql)
+[Archivo SQL MR](https://github.com/DCajiao/sportswear_store/blob/main/scripts/Scrip_sportswear_store.sql)
+[Archivo SQL Data](https://github.com/DCajiao/sportswear_store/blob/main/scripts/Scrip_datos.sql)
 
 
 
