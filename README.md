@@ -61,7 +61,7 @@ Este repositorio contiene el diseño del backend, centrado primordialmente en la
 
 - [Diagrama Completo](https://drive.google.com/file/d/18cunQ3gYTccL-rEyEJTIVkVz7Fbsw2J3/view?usp=sharing)
 
-- Observacion: Debido a varios inconvenientes con el MySQL Workbench, a la hora de exportar las imágenes no se logra apreciar muy bien el dominio de las columnas, pero sí en el script. Por ende, se clarificarán a continuación:
+- Observacion: Debido al MySQL Workbench, a la hora de exportar las imágenes no se logra apreciar muy bien el dominio de las columnas, pero sí en el script. Por ende, se clarificarán a continuación:
     | Tabla    | Columna  | Dominio                           |
     |----------|----------|-----------------------------------|
     | Cuenta   | Tipo     | 'Cliente', 'Administrador'        |
