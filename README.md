@@ -59,13 +59,21 @@ Este repositorio contiene el diseño del backend, centrado primordialmente en la
 
 ![MR-diagrama-png](https://github.com/DCajiao/sportswear_store/blob/main/images/MR.png?raw=true)
 
-- [MR-Script](https://drive.google.com/file/d/1q_vPc61-xCk3I9VxJdD0yMcix2lhb_Ua/view?usp=drive_link)
-- [Diagrama completo](https://drive.google.com/file/d/1OhrWwU322MSNL48Lc3sZaY-cKv6n9IXW/view)
+- Observacion: Debido a varios inconvenientes con el MySQL Workbench, a la hora de exportar las imágenes no se logra apreciar muy bien el dominio de las columnas, pero sí en el script. Por ende, se clarificarán a continuación:
+    | Tabla    | Columna  | Dominio                           |
+    |----------|----------|-----------------------------------|
+    | Usuario  | Tipo     | 'Cliente', 'Administrador'        |
+    | Usuario  | Genero   | 'Hombre', 'Mujer'                 |
+    | Producto | Tipo     | 'Articulo', 'Diseño'              |
+    | Producto | Seccion  | 'Hombre', 'Mujer', 'Niño'         |
 
 
-## 📝 Script:
 
-[Archivo SQL](https://github.com/DCajiao/sportswear_store/blob/main/sql/Scrip_sportswear_store.sql)
+## 📝 Scripts:
+
+[Archivo SQL MR](https://github.com/DCajiao/sportswear_store/blob/main/sql/Scrip_sportswear_store.sql)
+[Archivo SQL Data](https://github.com/DCajiao/sportswear_store/blob/main/sql/Scrip_datos.sql)
+
 
 
 ## 🚀 Próximamente …
