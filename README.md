@@ -59,10 +59,12 @@ Este repositorio contiene el diseño del backend, centrado primordialmente en la
 
 ![MR-diagrama-png](https://github.com/DCajiao/sportswear_store/blob/main/images/MR.png?raw=true)
 
+- [Diagrama Completo](https://drive.google.com/file/d/18cunQ3gYTccL-rEyEJTIVkVz7Fbsw2J3/view?usp=sharing)
+
 - Observacion: Debido a varios inconvenientes con el MySQL Workbench, a la hora de exportar las imágenes no se logra apreciar muy bien el dominio de las columnas, pero sí en el script. Por ende, se clarificarán a continuación:
     | Tabla    | Columna  | Dominio                           |
     |----------|----------|-----------------------------------|
-    | Usuario  | Tipo     | 'Cliente', 'Administrador'        |
+    | Cuenta   | Tipo     | 'Cliente', 'Administrador'        |
     | Usuario  | Genero   | 'Hombre', 'Mujer'                 |
     | Producto | Tipo     | 'Articulo', 'Diseño'              |
     | Producto | Seccion  | 'Hombre', 'Mujer', 'Niño'         |
