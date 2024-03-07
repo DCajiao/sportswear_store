@@ -1,26 +1,26 @@
-INSERT INTO Cuenta (Usuario, Tipo, Contraseña) VALUES
-('juan_perez', 'Administrador', 'P3r3z#2024'),
-('Maria_gonzalez', 'Cliente', 'G0nz@lez21'),
-('Pedro_ruiz12', 'Cliente', 'Ruiz_2024'),
-('Luisa_martinez9191', 'Cliente', 'M@rt1n3z!'),
-('77Carlos_rodriguez77', 'Cliente', 'R0dr1gu3z&'),
-('Ana_5454', 'Cliente', 'S@nch3z21'),
-('Pablito22', 'Cliente', 'L0pez2024'),
-('Sofia_', 'Cliente', 'G0mez#21'),
-('Diego_el_master', 'Cliente', 'D14z!'),
-('Lauris', 'Cliente', 'H3rn@nd3z20');
+INSERT INTO `Sportswear_Store`.`Usuario` (`Nombre`, `Correo`, `Telefono`, `Genero`, `Edad`) VALUES
+('Juan', 'juan@example.com', '123456789', 'Hombre', 25),
+('Maria', 'maria@example.com', '987654321', 'Mujer', 30),
+('Pedro', 'pedro@example.com', '555555555', 'Hombre', 28),
+('Luisa', 'luisa@example.com', '444444444', 'Mujer', 35),
+('Carlos', 'carlos@example.com', '777777777', 'Hombre', 40),
+('Ana', 'ana@example.com', '666666666', 'Mujer', 32),
+('Pablo', 'pablo@example.com', '333333333', 'Hombre', 45),
+('Sofia', 'sofia@example.com', '222222222', 'Mujer', 27),
+('Diego', 'diego@example.com', '999999999', 'Hombre', 38),
+('Laura', 'laura@example.com', '111111111', 'Mujer', 33);
 
-INSERT INTO `Sportswear_Store`.`Usuario` (`Nombre`, `Correo`, `Telefono`, `Genero`, `Edad`, `Cuenta_Usuario`) VALUES
-('Juan', 'juan@example.com', '123456789', 'Hombre', 25, 'juan_perez'),
-('Maria', 'maria@example.com', '987654321', 'Mujer', 30, 'Maria_gonzalez'),
-('Pedro', 'pedro@example.com', '555555555', 'Hombre', 28, 'Pedro_ruiz12'),
-('Luisa', 'luisa@example.com', '444444444', 'Mujer', 35, 'Luisa_martinez9191'),
-('Carlos', 'carlos@example.com', '777777777', 'Hombre', 40, '77Carlos_rodriguez77'),
-('Ana', 'ana@example.com', '666666666', 'Mujer', 32, 'Ana_5454'),
-('Pablo', 'pablo@example.com', '333333333', 'Hombre', 45, 'Pablito22'),
-('Sofia', 'sofia@example.com', '222222222', 'Mujer', 27, 'Sofia_'),
-('Diego', 'diego@example.com', '999999999', 'Hombre', 38, 'Diego_el_master'),
-('Laura', 'laura@example.com', '111111111', 'Mujer', 33, 'Lauris');
+INSERT INTO `Sportswear_Store`.`Cuenta` (`Usuario`, `Tipo`, `Contraseña`, `Usuario_Identificacion`) VALUES
+('juan_perez', 'Administrador', 'P3r3z#2024',1),
+('Maria_gonzalez', 'Cliente', 'G0nz@lez21',2),
+('Pedro_ruiz12', 'Cliente', 'Ruiz_2024',3),
+('Luisa_martinez9191', 'Cliente', 'M@rt1n3z!',4),
+('77Carlos_rodriguez77', 'Cliente', 'R0dr1gu3z&',5),
+('Ana_5454', 'Cliente', 'S@nch3z21',6),
+('Pablito22', 'Cliente', 'L0pez2024',7),
+('Sofia_', 'Cliente', 'G0mez#21',8),
+('Diego_el_master', 'Cliente', 'D14z!',9),
+('Lauris', 'Cliente', 'H3rn@nd3z20',10);
 
 INSERT INTO `Sportswear_Store`.`Compra` (`Costo_total`, `Fecha_compra`, `Usuario_Identificacion`) VALUES
 (100.50, '2024-03-01', 1),
