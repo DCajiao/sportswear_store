@@ -62,13 +62,13 @@ INSERT INTO `Sportswear_Store`.`Producto` (`Precio`, `Imagen_producto`, `Tipo`, 
 (50.00, 'imagen1.jpg', 'Articulo', 'Camisa', 'Hombre', 100),
 (35.00, 'imagen2.jpg', 'Articulo', 'Pantalon', 'Mujer', 80),
 (20.00, 'imagen3.jpg', 'Articulo', 'Gorra', 'Niño', 120),
-(45.00, 'imagen4.jpg', 'Diseno', 'Sudadera', 'Hombre', 90),
-(60.00, 'imagen5.jpg', 'Diseno', 'Vestido', 'Mujer', 70),
+(45.00, 'imagen4.jpg', 'Diseno', '', '', 90),
+(60.00, 'imagen5.jpg', 'Diseno', '', '', 70),
 (25.00, 'imagen6.jpg', 'Articulo', 'Zapatillas', 'Niño', 110),
 (40.00, 'imagen7.jpg', 'Articulo', 'Polo', 'Hombre', 95),
-(55.00, 'imagen8.jpg', 'Diseno', 'Falda', 'Mujer', 75),
+(55.00, 'imagen8.jpg', 'Diseno', '', '', 75),
 (30.00, 'imagen9.jpg', 'Articulo', 'Calcetines', 'Niño', 130),
-(65.00, 'imagen10.jpg', 'Diseno', 'Chaqueta', 'Hombre', 85);
+(65.00, 'imagen10.jpg', 'Diseno', '', '', 85);
 
 INSERT INTO `Sportswear_Store`.`Contiene` (`Producto_Identificacion`, `Compra_ID_compra`, `Cantidad`) VALUES
 (1, 1, 2),
