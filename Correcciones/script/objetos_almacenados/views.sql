@@ -10,3 +10,24 @@ WHERE Cantidad > 0;
 --SELECT * FROM ProductosDisponibles WHERE Tipo = 'Articulo' AND Seccion = 'Hombre';
 
 -- -----------------------------------------------------
+-- Vista de los productos con el conteo de ventas
+CREATE VIEW VentasProducto AS
+SELECT p.Identificacion AS ID_Producto, 
+    p.Tipo,
+	p.Tipo_Articulo,
+    COUNT(c.Producto_Identificacion) AS Cantidad_Ventas
+FROM Producto p
+LEFT JOIN Contiene c ON p.Identificacion = c.Producto_Identificacion
+GROUP BY p.Identificacion;
+
+-- ¿Cómo llamarlo?
+--SELECT * FROM VentasProducto;
+
+-- -----------------------------------------------------
+-- Vista de Cantidad de ejemplares de un producto 
+CREATE VIEW Vista_Cantidad_Ejemplares AS
+SELECT Identificacion AS Producto_ID, Cantidad, Tipo_Articulo AS Cantidad_Ejemplares
+FROM Producto;
+
+-- ¿Cómo llamarlo?
+-- SELECT * FROM Vista_Cantidad_Ejemplares;
