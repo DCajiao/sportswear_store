@@ -15,9 +15,9 @@ CREATE SCHEMA IF NOT EXISTS `Sportswear_Store` DEFAULT CHARACTER SET utf8 ;
 USE `Sportswear_Store` ;
 
 -- -----------------------------------------------------
--- Table `Sportswear_Store`.`Usuario`
+-- Table `Sportswear_Store`.`Persona`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Usuario` (
+CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Persona` (
     `Identificacion` INT NOT NULL AUTO_INCREMENT,
     `Nombre` VARCHAR(45) NOT NULL,
     `Correo` VARCHAR(45) NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Compra` (
     INDEX `fk_Compra_Usuario_idx` (`Usuario_Identificacion` ASC),
     CONSTRAINT `fk_Compra_Usuario`
         FOREIGN KEY (`Usuario_Identificacion`)
-        REFERENCES `Sportswear_Store`.`Usuario` (`Identificacion`)
+        REFERENCES `Sportswear_Store`.`Persona` (`Identificacion`)
     )
 ENGINE = InnoDB;
 
@@ -168,7 +168,7 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Cuenta` (
     INDEX `fk_Cuenta_Usuario1_idx` (`Usuario_Identificacion` ASC),
     CONSTRAINT `fk_Cuenta_Usuario1`
         FOREIGN KEY (`Usuario_Identificacion`)
-        REFERENCES `Sportswear_Store`.`Usuario` (`Identificacion`)
+        REFERENCES `Sportswear_Store`.`Persona` (`Identificacion`)
     )
 ENGINE = InnoDB;
 

@@ -47,7 +47,7 @@ GROUP BY Mes, Año;
 
 -- ¿Cuál es el promedio de edad de los clientes por género?
 SELECT Genero, ROUND(AVG(Edad)) AS PromedioEdad -- ROUND usamos esta función ya que funciona igual en Python.
-FROM usuario 
+FROM persona
 GROUP BY Genero;
 
 -- ¿Cuántos clientes han dejado reseñas y cuál es la valoración promedio que han dado?
@@ -56,8 +56,8 @@ FROM resena AS r;
 
 -- ¿Cuál es el cliente que ha realizado la compra más cara en términos de costo total?
 SELECT u.Nombre, c.Costo_total 
-FROM usuario AS u 
-JOIN compra AS c ON u.Identificacion = c.Usuario_Identificacion 
+FROM personas AS p 
+JOIN compra AS c ON p.Identificacion = c.Usuario_Identificacion 
 WHERE c.Costo_total = (SELECT MAX(Costo_total) FROM compra);
 
 -- CONSULTA ANIDADA -->

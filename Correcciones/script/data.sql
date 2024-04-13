@@ -1,4 +1,4 @@
-INSERT INTO `Sportswear_Store`.`Usuario` (`Nombre`, `Correo`, `Telefono`, `Genero`, `Edad`) VALUES
+INSERT INTO `Sportswear_Store`.`Persona` (`Nombre`, `Correo`, `Telefono`, `Genero`, `Edad`) VALUES
 ('Juan', 'juan@example.com', '123456789', 'Hombre', 25),
 ('Maria', 'maria@example.com', '987654321', 'Mujer', 30),
 ('Pedro', 'pedro@example.com', '555555555', 'Hombre', 28),
