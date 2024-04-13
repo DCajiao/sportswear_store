@@ -31,3 +31,19 @@ FROM Producto;
 
 -- ¿Cómo llamarlo?
 -- SELECT * FROM Vista_Cantidad_Ejemplares;
+
+-- -----------------------------------------------------
+-- Vista de los 3 productos más vendidos
+CREATE VIEW Top3ProductosMasVendidos AS
+SELECT p.Identificacion AS ID_Producto, 
+    p.Tipo_Articulo AS Nombre_Producto,
+    COUNT(*) AS Cantidad_Ventas
+FROM Producto p
+LEFT JOIN Contiene c ON p.Identificacion = c.Producto_Identificacion
+GROUP BY p.Identificacion
+ORDER BY Cantidad_Ventas DESC
+LIMIT 3;
+-- ¿Cómo llamarlo?
+--SELECT * FROM Top3ProductosMasVendidos
+
+-- -----------------------------------------------------
