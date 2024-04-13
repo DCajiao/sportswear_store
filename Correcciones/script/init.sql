@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Producto` (
     `Identificacion` INT NOT NULL AUTO_INCREMENT,
     `Precio` DECIMAL(10,2) NOT NULL,
     `Imagen_producto` BLOB NOT NULL,
-    `Tipo` ENUM('Articulo', 'Diseño') NOT NULL,
+    `Tipo` ENUM('Articulo', 'Diseno') NOT NULL,
     `Tipo_Articulo` VARCHAR(45) NULL,
     `Seccion` ENUM('Hombre', 'Mujer', 'Nino') NULL,
     `Cantidad` INT NULL,
