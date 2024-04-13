@@ -22,17 +22,17 @@ INSERT INTO `Sportswear_Store`.`Cuenta` (`Usuario`, `Tipo`, `Contraseña`, `Usua
 ('Diego_el_master', 'Cliente', 'D14z!',9),
 ('Lauris', 'Cliente', 'H3rn@nd3z20',10);
 
-INSERT INTO `Sportswear_Store`.`Compra` (`Costo_total`, `Fecha_compra`, `Usuario_Identificacion`) VALUES
-(100.50, '2024-03-01', 1),
-(75.20, '2024-03-02', 2),
-(150.75, '2024-02-03', 3),
-(200.00, '2024-03-04', 4),
-(90.80, '2024-03-05', 5),
-(120.25, '2024-03-06', 6),
-(85.50, '2024-02-07', 7),
-(95.60, '2024-03-08', 8),
-(110.45, '2024-03-10', 9),
-(130.70, '2024-03-10', 10);
+INSERT INTO `Sportswear_Store`.`Compra` (`Costo_total`, `Fecha_compra`, `Cuenta_usuario`, 'Cuenta_usuario_identificacion') VALUES
+(100.50, '2024-03-01', 1, 1),
+(75.20, '2024-03-02', 2, 2),
+(150.75, '2024-02-03', 3, 3),
+(200.00, '2024-03-04', 4, 4),
+(90.80, '2024-03-05', 5, 5),
+(120.25, '2024-03-06', 6, 6),
+(85.50, '2024-02-07', 7, 7),
+(95.60, '2024-03-08', 8, 8),
+(110.45, '2024-03-10', 9, 9),
+(130.70, '2024-03-10', 10, );
 
 INSERT INTO `Sportswear_Store`.`Lugar` (`Nombre`, `Lugar_Codigo`) VALUES
 ('Cali', 1),
@@ -105,15 +105,3 @@ INSERT INTO `Sportswear_Store`.`Almacena` (`Producto_Identificacion`, `Paquete_I
 (8, 4),
 (9, 4),
 (10, 4);
-
-INSERT INTO `Sportswear_Store`.`Resena` (`Comentarios`, `Valoraciones`, `Producto_Identificacion`) VALUES
-('Buen producto', 4, 1),
-('Excelente calidad', 5, 2),
-('Muy recomendado', 4, 3),
-('Me encanto', 5, 4),
-('Gran diseno', 4, 5),
-('Comodo y bonito', 5, 9),
-('Buena relacion calidad-precio', 4, 7),
-('Perfecto para cualquier ocasion', 5, 9),
-('Muy satisfecho con la compra', 4, 9),
-('Supero mis expectativas', 5, 10);
