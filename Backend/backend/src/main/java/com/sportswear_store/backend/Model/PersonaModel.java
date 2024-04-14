@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
+//Creacion de la tabla persona
 public class PersonaModel {
     @Id
     private Integer Identificacion;
@@ -23,7 +23,7 @@ public class PersonaModel {
     private String Correo; 
     private String Telefono;
     @Column(name = "Genero")
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING) //Implementacion del ENUM de MySQL
     private Genero Genero;
     private Integer Edad;    
 }
