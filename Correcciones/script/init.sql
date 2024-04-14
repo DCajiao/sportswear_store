@@ -122,6 +122,7 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Producto` (
   `Tipo_Articulo` VARCHAR(45) NULL,
   `Seccion` ENUM('Hombre', 'Mujer', 'Nino') NULL,
   `Cantidad` INT NULL,
+  `Especificaciones` JSON NULL,
   PRIMARY KEY (`Identificacion`))
 ENGINE = InnoDB;
 
