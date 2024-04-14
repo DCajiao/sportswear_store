@@ -27,7 +27,15 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Persona` (
   `Telefono` VARCHAR(45) NOT NULL,
   `Genero` ENUM('Hombre', 'Mujer') NULL,
   `Edad` INT NULL,
-  PRIMARY KEY (`Identificacion`))
+  `Lugar_Codigo` INT NOT NULL,
+  `Lugar_Lugar_Codigo` INT NOT NULL,
+  PRIMARY KEY (`Identificacion`, `Lugar_Codigo`, `Lugar_Lugar_Codigo`),
+  INDEX `fk_Persona_Lugar1_idx` (`Lugar_Codigo` ASC, `Lugar_Lugar_Codigo` ASC) VISIBLE,
+  CONSTRAINT `fk_Persona_Lugar1`
+    FOREIGN KEY (`Lugar_Codigo` , `Lugar_Lugar_Codigo`)
+    REFERENCES `Sportswear_Store`.`Lugar` (`Codigo` , `Lugar_Codigo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 

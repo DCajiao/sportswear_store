@@ -1,14 +1,14 @@
-INSERT INTO `Sportswear_Store`.`Persona` (`Nombre`, `Correo`, `Telefono`, `Genero`, `Edad`) VALUES
-('Juan', 'juan@example.com', '123456789', 'Hombre', 25),
-('Maria', 'maria@example.com', '987654321', 'Mujer', 30),
-('Pedro', 'pedro@example.com', '555555555', 'Hombre', 28),
-('Luisa', 'luisa@example.com', '444444444', 'Mujer', 35),
-('Carlos', 'carlos@example.com', '777777777', 'Hombre', 40),
-('Ana', 'ana@example.com', '666666666', 'Mujer', 32),
-('Pablo', 'pablo@example.com', '333333333', 'Hombre', 45),
-('Sofia', 'sofia@example.com', '222222222', 'Mujer', 27),
-('Diego', 'diego@example.com', '999999999', 'Hombre', 38),
-('Laura', 'laura@example.com', '111111111', 'Mujer', 33);
+INSERT INTO `Sportswear_Store`.`Persona` (`Nombre`, `Correo`, `Telefono`, `Genero`, `Edad`, `Lugar_Codigo`, `Lugar_Lugar_Codigo`) VALUES
+('Juan', 'juan@example.com', '123456789', 'Hombre', 25, 2, 2),
+('Maria', 'maria@example.com', '987654321', 'Mujer', 30, 1, 1),
+('Pedro', 'pedro@example.com', '555555555', 'Hombre', 28, 1, 1),
+('Luisa', 'luisa@example.com', '444444444', 'Mujer', 35, 3, 3),
+('Carlos', 'carlos@example.com', '777777777', 'Hombre', 40, 7, 7),
+('Ana', 'ana@example.com', '666666666', 'Mujer', 32, 8, 8),
+('Pablo', 'pablo@example.com', '333333333', 'Hombre', 45, 1, 1),
+('Sofia', 'sofia@example.com', '222222222', 'Mujer', 27, 3, 3),
+('Diego', 'diego@example.com', '999999999', 'Hombre', 38, 8, 8),
+('Laura', 'laura@example.com', '111111111', 'Mujer', 33, 2, 8);
 
 INSERT INTO `Sportswear_Store`.`Cuenta` (`Usuario`, `Tipo`, `Contraseña`, `Usuario_Identificacion`) VALUES
 ('juan_perez', 'Administrador', 'P3r3z#2024',1),
