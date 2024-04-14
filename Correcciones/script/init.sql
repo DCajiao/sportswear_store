@@ -134,6 +134,7 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Contiene` (
   `Producto_Identificacion` INT NOT NULL,
   `Compra_ID_compra` INT NOT NULL,
   `Cantidad` INT NOT NULL,
+  `Especificaciones` JSON NULL,
   PRIMARY KEY (`Producto_Identificacion`, `Compra_ID_compra`),
   INDEX `fk_Producto_has_Compra_Compra1_idx` (`Compra_ID_compra` ASC) VISIBLE,
   INDEX `fk_Producto_has_Compra_Producto1_idx` (`Producto_Identificacion` ASC) VISIBLE,
