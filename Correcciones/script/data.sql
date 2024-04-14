@@ -22,7 +22,7 @@ INSERT INTO `Sportswear_Store`.`Cuenta` (`Usuario`, `Tipo`, `Contraseña`, `Usua
 ('Diego_el_master', 'Cliente', 'D14z!',9),
 ('Lauris', 'Cliente', 'H3rn@nd3z20',10);
 
-INSERT INTO `Sportswear_Store`.`Compra` (`Costo_total`, `Fecha_compra`, `Cuenta_usuario`, 'Cuenta_usuario_identificacion') VALUES
+INSERT INTO `Sportswear_Store`.`Compra` (`Costo_total`, `Fecha_compra`, `Cuenta_usuario`, `Cuenta_usuario_identificacion`) VALUES
 (100.50, '2024-03-01', 1, 1),
 (75.20, '2024-03-02', 2, 2),
 (150.75, '2024-02-03', 3, 3),
@@ -32,7 +32,8 @@ INSERT INTO `Sportswear_Store`.`Compra` (`Costo_total`, `Fecha_compra`, `Cuenta_
 (85.50, '2024-02-07', 7, 7),
 (95.60, '2024-03-08', 8, 8),
 (110.45, '2024-03-10', 9, 9),
-(130.70, '2024-03-10', 10, );
+(130.70, '2024-03-10', 10, 10);
+
 
 INSERT INTO `Sportswear_Store`.`Lugar` (`Nombre`, `Lugar_Codigo`) VALUES
 ('Cali', 1),
