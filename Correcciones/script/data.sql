@@ -1,14 +1,14 @@
-INSERT INTO `Sportswear_Store`.`Persona` (`Nombre`, `Correo`, `Telefono`, `Genero`, `Edad`, `Lugar_Codigo`, `Lugar_Lugar_Codigo`) VALUES
-('Juan', 'juan@example.com', '123456789', 'Hombre', 25, 2, 2),
-('Maria', 'maria@example.com', '987654321', 'Mujer', 30, 1, 1),
-('Pedro', 'pedro@example.com', '555555555', 'Hombre', 28, 1, 1),
-('Luisa', 'luisa@example.com', '444444444', 'Mujer', 35, 3, 3),
-('Carlos', 'carlos@example.com', '777777777', 'Hombre', 40, 7, 7),
-('Ana', 'ana@example.com', '666666666', 'Mujer', 32, 8, 8),
-('Pablo', 'pablo@example.com', '333333333', 'Hombre', 45, 1, 1),
-('Sofia', 'sofia@example.com', '222222222', 'Mujer', 27, 3, 3),
-('Diego', 'diego@example.com', '999999999', 'Hombre', 38, 8, 8),
-('Laura', 'laura@example.com', '111111111', 'Mujer', 33, 2, 8);
+INSERT INTO `Sportswear_Store`.`Persona` (`Nombre`, `Correo`, `Telefono`, `Genero`, `Edad`, `Lugar_Codigo`) VALUES
+('Juan', 'juan@example.com', '123456789', 'Hombre', 25, 2),
+('Maria', 'maria@example.com', '987654321', 'Mujer', 30, 1),
+('Pedro', 'pedro@example.com', '555555555', 'Hombre', 28, 1),
+('Luisa', 'luisa@example.com', '444444444', 'Mujer', 35, 3),
+('Carlos', 'carlos@example.com', '777777777', 'Hombre', 40, 7),
+('Ana', 'ana@example.com', '666666666', 'Mujer', 32, 8),
+('Pablo', 'pablo@example.com', '333333333', 'Hombre', 45, 1),
+('Sofia', 'sofia@example.com', '222222222', 'Mujer', 27, 3),
+('Diego', 'diego@example.com', '999999999', 'Hombre', 38, 8),
+('Laura', 'laura@example.com', '111111111', 'Mujer', 33, 2);
 
 INSERT INTO `Sportswear_Store`.`Cuenta` (`Usuario`, `Tipo`, `Contraseña`, `Usuario_Identificacion`) VALUES
 ('juan_perez', 'Administrador', 'P3r3z#2024',1),
@@ -22,17 +22,17 @@ INSERT INTO `Sportswear_Store`.`Cuenta` (`Usuario`, `Tipo`, `Contraseña`, `Usua
 ('Diego_el_master', 'Cliente', 'D14z!',9),
 ('Lauris', 'Cliente', 'H3rn@nd3z20',10);
 
-INSERT INTO `Sportswear_Store`.`Compra` (`Costo_total`, `Fecha_compra`, `Cuenta_usuario`, `Cuenta_usuario_identificacion`) VALUES
-(100.50, '2024-03-01', 1, 1),
-(75.20, '2024-03-02', 2, 2),
-(150.75, '2024-02-03', 3, 3),
-(200.00, '2024-03-04', 4, 4),
-(90.80, '2024-03-05', 5, 5),
-(120.25, '2024-03-06', 6, 6),
-(85.50, '2024-02-07', 7, 7),
-(95.60, '2024-03-08', 8, 8),
-(110.45, '2024-03-10', 9, 9),
-(130.70, '2024-03-10', 10, 10);
+INSERT INTO `Sportswear_Store`.`Compra` (`Costo_total`, `Fecha_compra`, `Cuenta_usuario`) VALUES
+(100.50, '2024-03-01', 1),
+(75.20, '2024-03-02', 2),
+(150.75, '2024-02-03', 3),
+(200.00, '2024-03-04', 4),
+(90.80, '2024-03-05', 5),
+(120.25, '2024-03-06', 6),
+(85.50, '2024-02-07', 7),
+(95.60, '2024-03-08', 8),
+(110.45, '2024-03-10', 9),
+(130.70, '2024-03-10', 10);
 
 
 INSERT INTO `Sportswear_Store`.`Lugar` (`Nombre`, `Lugar_Codigo`) VALUES
