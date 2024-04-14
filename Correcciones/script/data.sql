@@ -1,3 +1,15 @@
+INSERT INTO `Sportswear_Store`.`Lugar` (`Nombre`, `Lugar_Codigo`) VALUES
+('Cali', 1),
+('Medenin', 2),
+('Cucuta', 3),
+('Pasto', 4),
+('Bogota', 5),
+('Buga', 6),
+('Tulua', 7),
+('Santa Marta', 8),
+('Ibague', 9),
+('Manizales', 10);
+
 INSERT INTO `Sportswear_Store`.`Persona` (`Nombre`, `Correo`, `Telefono`, `Genero`, `Edad`, `Lugar_Codigo`) VALUES
 ('Juan', 'juan@example.com', '123456789', 'Hombre', 25, 2),
 ('Maria', 'maria@example.com', '987654321', 'Mujer', 30, 1),
@@ -23,29 +35,16 @@ INSERT INTO `Sportswear_Store`.`Cuenta` (`Usuario`, `Tipo`, `Contraseña`, `Usua
 ('Lauris', 'Cliente', 'H3rn@nd3z20',10);
 
 INSERT INTO `Sportswear_Store`.`Compra` (`Costo_total`, `Fecha_compra`, `Cuenta_usuario`) VALUES
-(100.50, '2024-03-01', 1),
-(75.20, '2024-03-02', 2),
-(150.75, '2024-02-03', 3),
-(200.00, '2024-03-04', 4),
-(90.80, '2024-03-05', 5),
-(120.25, '2024-03-06', 6),
-(85.50, '2024-02-07', 7),
-(95.60, '2024-03-08', 8),
-(110.45, '2024-03-10', 9),
-(130.70, '2024-03-10', 10);
-
-
-INSERT INTO `Sportswear_Store`.`Lugar` (`Nombre`, `Lugar_Codigo`) VALUES
-('Cali', 1),
-('Medenin', 2),
-('Cucuta', 3),
-('Pasto', 4),
-('Bogota', 5),
-('Buga', 6),
-('Tulua', 7),
-('Santa Marta', 8),
-('Ibague', 9),
-('Manizales', 10);
+(100.50, '2024-03-01', 'juan_perez'),
+(75.20, '2024-03-02', 'Maria_gonzalez'),
+(150.75, '2024-02-03','Pedro_ruiz12'), 
+(200.00, '2024-03-04', 'Luisa_martinez9191'),
+(90.80, '2024-03-05', '77Carlos_rodriguez77'),
+(120.25, '2024-03-06', 'Ana_5454'),
+(85.50, '2024-02-07', 'Pablito22'),
+(95.60, '2024-03-08', 'Sofia_'),
+(110.45, '2024-03-10', 'Diego_el_master'),
+(130.70, '2024-03-10', 'Lauris');
 
 INSERT INTO `Sportswear_Store`.`Envio` (`Direccion`, `Fecha_envio`, `Codigo_postal`, `Compra_ID_compra`, `Lugar_Codigo`) VALUES
 ('Calle 1 #123', '2024-03-01', 12345, 1, 1),
