@@ -1,6 +1,6 @@
 package com.sportswear_store.backend.Controller;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +19,7 @@ import com.sportswear_store.backend.Model.ProductosModel;
 import com.sportswear_store.backend.Service.IProductosService;
 
 @RestController
-@RequestMapping ("/backend/v1/productos")
+@RequestMapping ("/back/nat/productos")
 public class ProductosController {
     @Autowired 
     IProductosService productosService;
@@ -29,14 +29,19 @@ public class ProductosController {
         return new ResponseEntity<String>(productosService.guardarProducto(producto),HttpStatus.OK);
     }
     @GetMapping("/{id}")
-   public ResponseEntity<?> buscarProductoPorId(@PathVariable int getIdentificacion){
+   public ResponseEntity<?> buscarProductoPorId(@PathVariable int Identificacion){
         try {
-            ProductosModel producto = productosService.buscarProductoPorId(getIdentificacion);
+            ProductosModel producto = productosService.buscarProductoPorId(Identificacion);
             return ResponseEntity.ok(producto);
         } catch (RecursoNoEncontradoException e) {
             String mensajeError=e.getMessage();
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(mensajeError);
         }
+   }
+   @GetMapping("/")
+   public ResponseEntity<List<ProductosModel>> listarProductos(){
+        List<ProductosModel> productos = productosService.listarProductos();
+        return new ResponseEntity<List<ProductosModel>> (productos, HttpStatus.OK);
    }
    @DeleteMapping("/{id}")
    public ResponseEntity<?> eliminarProductoPorId(@PathVariable int getIdentificacion){

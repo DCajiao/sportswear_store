@@ -1,5 +1,6 @@
 package com.sportswear_store.backend.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,22 +21,26 @@ public class ProductosServiceImp implements IProductosService{
         return "El producto con el Id "+producto.getIdentificacion()+" fue creado con exito";
     }
     @Override
-    public ProductosModel buscarProductoPorId(int getIdentificacion) {
-        Optional<ProductosModel> productoEncontrado = productosRepository.findById(getIdentificacion);
-        return productoEncontrado.orElseThrow(()-> new RecursoNoEncontradoException("Producto no encontrado con el Id "+getIdentificacion));
+    public ProductosModel buscarProductoPorId(int Identificacion) {
+        Optional<ProductosModel> productoEncontrado = productosRepository.findById(Identificacion);
+        return productoEncontrado.orElseThrow(()-> new RecursoNoEncontradoException("Producto no encontrado con el Id "+Identificacion));
     }
     @Override
-    public void eliminarProductoPorId(int getIdentificacion) {
-        Optional<ProductosModel> productoEncontrado = productosRepository.findById(getIdentificacion);
+    public List<ProductosModel> listarProductos() {
+        return productosRepository.findAll();
+    }
+    @Override
+    public void eliminarProductoPorId(int Identificacion) {
+        Optional<ProductosModel> productoEncontrado = productosRepository.findById(Identificacion);
         if (productoEncontrado.isPresent()){
             productosRepository.delete(productoEncontrado.get());
         } else {
-            throw new RecursoNoEncontradoException("Producto no encontrado con el Id "+getIdentificacion);
+            throw new RecursoNoEncontradoException("Producto no encontrado con el Id "+Identificacion);
         }
     }
     @Override
-    public ProductosModel actualizarProducto(int getIdentificacion, ProductosModel productoNuevo) {
-        Optional<ProductosModel> productoEncontrado = productosRepository.findById(getIdentificacion);
+    public ProductosModel actualizarProducto(int Identificacion, ProductosModel productoNuevo) {
+        Optional<ProductosModel> productoEncontrado = productosRepository.findById(Identificacion);
         if (productoEncontrado.isPresent()) {
             ProductosModel producto = productoEncontrado.get();
             producto.setPrecio(productoNuevo.getPrecio());
@@ -47,4 +52,5 @@ public class ProductosServiceImp implements IProductosService{
             return null;
         }
     }
+    
 }

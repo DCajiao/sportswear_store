@@ -1,7 +1,5 @@
 package com.sportswear_store.backend.Model;
 
-import javax.json.Json;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -33,5 +31,5 @@ public class ProductosModel {
     @Enumerated(EnumType.STRING)
     private Seccion Seccion;
     private Integer Cantidad;
-    private Json Especificaciones;
+    private String Especificaciones;
 }
