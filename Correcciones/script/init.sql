@@ -25,13 +25,11 @@ CREATE TABLE IF NOT EXISTS Sportswear_Store.Lugar (
   Nombre VARCHAR(45) NOT NULL,
   Lugar_Codigo INT NOT NULL,
   PRIMARY KEY (Codigo, Lugar_Codigo),
-  INDEX fk_Lugar_Lugar1_idx (Lugar_Codigo ASC) VISIBLE,
-  UNIQUE INDEX Lugar_Codigo_UNIQUE (Lugar_Codigo ASC) VISIBLE,
+  INDEX fk_Lugar_Lugar1_idx (Lugar_Codigo ASC),
+  UNIQUE INDEX Lugar_Codigo_UNIQUE (Lugar_Codigo ASC),
   CONSTRAINT fk_Lugar_Lugar1
     FOREIGN KEY (Lugar_Codigo)
-    REFERENCES Sportswear_Store.Lugar (Codigo)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES Sportswear_Store.Lugar (Codigo))
 ENGINE = InnoDB;
 
 
@@ -47,12 +45,10 @@ CREATE TABLE IF NOT EXISTS Sportswear_Store.Persona (
   Edad INT NULL,
   Lugar_Codigo INT NOT NULL,
   PRIMARY KEY (Identificacion, Lugar_Codigo),
-  INDEX fk_Persona_Lugar1_idx (Lugar_Codigo ASC) VISIBLE,
+  INDEX fk_Persona_Lugar1_idx (Lugar_Codigo ASC),
   CONSTRAINT fk_Persona_Lugar1
     FOREIGN KEY (Lugar_Codigo)
-    REFERENCES Sportswear_Store.Lugar (Codigo)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES Sportswear_Store.Lugar (Codigo))
 ENGINE = InnoDB;
 
 
@@ -65,12 +61,10 @@ CREATE TABLE IF NOT EXISTS Sportswear_Store.Cuenta (
   Contraseña VARCHAR(45) NOT NULL,
   Usuario_Identificacion INT NOT NULL,
   PRIMARY KEY (Usuario, Usuario_Identificacion),
-  INDEX fk_Cuenta_Usuario1_idx (Usuario_Identificacion ASC) VISIBLE,
+  INDEX fk_Cuenta_Usuario1_idx (Usuario_Identificacion ASC),
   CONSTRAINT fk_Cuenta_Usuario1
     FOREIGN KEY (Usuario_Identificacion)
-    REFERENCES Sportswear_Store.Persona (Identificacion)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES Sportswear_Store.Persona (Identificacion))
 ENGINE = InnoDB;
 
 
@@ -83,12 +77,10 @@ CREATE TABLE IF NOT EXISTS Sportswear_Store.Compra (
   Fecha_compra DATE NOT NULL,
   Cuenta_Usuario VARCHAR(50) NOT NULL,
   PRIMARY KEY (ID_compra, Cuenta_Usuario),
-  INDEX fk_Compra_Cuenta1_idx (Cuenta_Usuario ASC) VISIBLE,
+  INDEX fk_Compra_Cuenta1_idx (Cuenta_Usuario ASC),
   CONSTRAINT fk_Compra_Cuenta1
     FOREIGN KEY (Cuenta_Usuario)
-    REFERENCES Sportswear_Store.Cuenta (Usuario)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES Sportswear_Store.Cuenta (Usuario))
 ENGINE = InnoDB;
 
 
@@ -103,18 +95,14 @@ CREATE TABLE IF NOT EXISTS Sportswear_Store.Envio (
   Compra_ID_compra INT NOT NULL,
   Lugar_Codigo INT NOT NULL,
   PRIMARY KEY (ID_envio, Compra_ID_compra, Lugar_Codigo),
-  INDEX fk_Envio_Compra1_idx (Compra_ID_compra ASC) VISIBLE,
-  INDEX fk_Envio_Lugar1_idx (Lugar_Codigo ASC) VISIBLE,
+  INDEX fk_Envio_Compra1_idx (Compra_ID_compra ASC),
+  INDEX fk_Envio_Lugar1_idx (Lugar_Codigo ASC),
   CONSTRAINT fk_Envio_Compra1
     FOREIGN KEY (Compra_ID_compra)
-    REFERENCES Sportswear_Store.Compra (ID_compra)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    REFERENCES Sportswear_Store.Compra (ID_compra),
   CONSTRAINT fk_Envio_Lugar1
     FOREIGN KEY (Lugar_Codigo)
-    REFERENCES Sportswear_Store.Lugar (Codigo)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES Sportswear_Store.Lugar (Codigo))
 ENGINE = InnoDB;
 
 
@@ -143,18 +131,14 @@ CREATE TABLE IF NOT EXISTS Sportswear_Store.Contiene (
   Cantidad INT NOT NULL,
   Especificaciones JSON NULL,
   PRIMARY KEY (Producto_Identificacion, Compra_ID_compra),
-  INDEX fk_Producto_has_Compra_Compra1_idx (Compra_ID_compra ASC) VISIBLE,
-  INDEX fk_Producto_has_Compra_Producto1_idx (Producto_Identificacion ASC) VISIBLE,
+  INDEX fk_Producto_has_Compra_Compra1_idx (Compra_ID_compra ASC),
+  INDEX fk_Producto_has_Compra_Producto1_idx (Producto_Identificacion ASC),
   CONSTRAINT fk_Producto_has_Compra_Producto1
     FOREIGN KEY (Producto_Identificacion)
-    REFERENCES Sportswear_Store.Producto (Identificacion)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    REFERENCES Sportswear_Store.Producto (Identificacion),
   CONSTRAINT fk_Producto_has_Compra_Compra1
     FOREIGN KEY (Compra_ID_compra)
-    REFERENCES Sportswear_Store.Compra (ID_compra)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES Sportswear_Store.Compra (ID_compra))
 ENGINE = InnoDB;
 
 
@@ -175,18 +159,14 @@ CREATE TABLE IF NOT EXISTS Sportswear_Store.Almacena (
   Producto_Identificacion INT NOT NULL,
   Paquete_ID_paquete INT NOT NULL,
   PRIMARY KEY (Producto_Identificacion, Paquete_ID_paquete),
-  INDEX fk_Producto_has_Paquete_Paquete1_idx (Paquete_ID_paquete ASC) VISIBLE,
-  INDEX fk_Producto_has_Paquete_Producto1_idx (Producto_Identificacion ASC) VISIBLE,
+  INDEX fk_Producto_has_Paquete_Paquete1_idx (Paquete_ID_paquete ASC),
+  INDEX fk_Producto_has_Paquete_Producto1_idx (Producto_Identificacion ASC),
   CONSTRAINT fk_Producto_has_Paquete_Producto1
     FOREIGN KEY (Producto_Identificacion)
-    REFERENCES Sportswear_Store.Producto (Identificacion)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    REFERENCES Sportswear_Store.Producto (Identificacion),
   CONSTRAINT fk_Producto_has_Paquete_Paquete1
     FOREIGN KEY (Paquete_ID_paquete)
-    REFERENCES Sportswear_Store.Paquete (ID_paquete)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES Sportswear_Store.Paquete (ID_paquete))
 ENGINE = InnoDB;
 
 
