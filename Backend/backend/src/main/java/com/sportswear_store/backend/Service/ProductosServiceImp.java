@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.sportswear_store.backend.Exception.RecursoNoEncontradoException;
 import com.sportswear_store.backend.Model.ProductosModel;
-import com.sportswear_store.backend.Repositorio.IProductosRepository;
+import com.sportswear_store.backend.Repository.IProductosRepository;
 
 @Service
 public class ProductosServiceImp implements IProductosService{
