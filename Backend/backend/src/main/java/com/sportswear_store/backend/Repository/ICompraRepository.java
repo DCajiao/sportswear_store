@@ -1,8 +1,8 @@
-package com.sportswear_store.backend.Repositorio;
+package com.sportswear_store.backend.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.sportswear_store.backend.Modelo.CompraModel;
+import com.sportswear_store.backend.Model.CompraModel;
 
 public interface ICompraRepository extends JpaRepository< CompraModel, Integer> {
     

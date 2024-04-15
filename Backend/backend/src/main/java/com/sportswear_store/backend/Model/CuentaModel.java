@@ -1,31 +1,29 @@
-package com.sportswear_store.backend.Modelo;
-
-import java.sql.Date;
+package com.sportswear_store.backend.Model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import com.sportswear_store.backend.Model.Tipo;
 
 @Entity
-@Table (name= "Envio")
+@Table(name= "Cuenta")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EnvioModel {
+
+public class CuentaModel {
     @Id
-    private Integer ID_Envio;
-    private String Direccion;
-    private int Codigo_Postal;
-    private Date Fecha_envio;
+    private String Usuario;
     
-
-
+    @Column(name="Tipo")
+    @Enumerated(EnumType.STRING)
+    private Tipo tipo;
+    
+    private String Contraseña;
 }
