@@ -1,8 +1,7 @@
 package com.sportswear_store.backend.Model;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -22,8 +21,10 @@ public class LugarModel {
     private Integer Codigo;
     private String Nombre;
 
+
     @ManyToOne
     @JoinColumn(name = "Lugar_Codigo")
     @JsonIgnore // Evita la serialización de la referencia bidireccional
     private LugarModel lugar_Codigo;
+
 }
