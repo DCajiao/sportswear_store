@@ -99,9 +99,7 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Envio` (
   INDEX `fk_Envio_Lugar1_idx` (`Lugar_Codigo` ASC) VISIBLE,
   CONSTRAINT `fk_Envio_Compra1`
     FOREIGN KEY (`Compra_ID_compra`)
-    REFERENCES `Sportswear_Store`.`Compra` (`ID_compra`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    REFERENCES `Sportswear_Store`.`Compra` (`ID_compra`),
   CONSTRAINT `fk_Envio_Lugar1`
     FOREIGN KEY (`Lugar_Codigo`)
     REFERENCES `Sportswear_Store`.`Lugar` (`Codigo`))
@@ -132,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Contiene` (
   `Producto_Identificacion` INT NOT NULL,
   `Compra_ID_compra` INT NOT NULL,
   `Cantidad` INT NOT NULL,
-  `Especificaciones` JSON NOT NULL,
+  `Especificaciones` JSON NULL,
   PRIMARY KEY (`Producto_Identificacion`, `Compra_ID_compra`),
   INDEX `fk_Producto_has_Compra_Compra1_idx` (`Compra_ID_compra` ASC) VISIBLE,
   INDEX `fk_Producto_has_Compra_Producto1_idx` (`Producto_Identificacion` ASC) VISIBLE,

@@ -58,17 +58,17 @@ INSERT INTO `Sportswear_Store`.`Envio` (`Direccion`, `Fecha_envio`, `Codigo_post
 ('Carrera 9 #2021', '2024-03-09', 90123, 9, 9),
 ('Calle 10 #2223', '2024-03-10', 12345, 10, 10);
 
-INSERT INTO `Sportswear_Store`.`Producto` (`Precio`, `Imagen_producto`, `Tipo`, `Tipo_Articulo`, `Seccion`, `Cantidad`, `Especificaciones`) VALUES
-(50.00, 'imagen1.jpg', 'Articulo', 'Camisa', 'Hombre', 100, '{"XS":20, "S":20, "M":20, "L":20, "XL":20}'),
-(35.00, 'imagen2.jpg', 'Articulo', 'Pantalon', 'Mujer', 80, '{"4":10, "6":30, "8":10, "10":15, "12":10, "14":5}'),
-(20.00, 'imagen3.jpg', 'Articulo', 'Gorra', 'Niño', 120, '{"12 meses":5, "18 meses":10, "24 meses":10, "36 meses":15,"4 años":30, "6 años":25, "8-12 años":25}'),
-(45.00, 'imagen4.jpg', 'Diseno', NULL, NULL, 90,'{"Especificaciones":"No tiene"}'),
-(60.00, 'imagen5.jpg', 'Diseno', NULL, NULL, 70, '{"Especificaciones":"No tiene"}'),
-(25.00, 'imagen6.jpg', 'Articulo', 'Zapatillas', 'Niño', 110, '{"20":5, "21":10, "22":15, "23":10, "24":10, "25":15, "26":10, "27":5, "28":20, "29":5, "30":5}'),
-(40.00, 'imagen7.jpg', 'Articulo', 'Polo', 'Hombre', 95, '{"XS":10, "S":20, "M":30, "L":20, "XL":15}'),
-(55.00, 'imagen8.jpg', 'Diseno', NULL, NULL, 75, '{"Especificaciones":"No tiene"}'),
-(30.00, 'imagen9.jpg', 'Articulo', 'Calcetines', 'Niño', 130, '{"2-4":60, "4-6":40, "6-8":30}'),
-(65.00, 'imagen10.jpg', 'Diseno', NULL, NULL, 85, '{"Especificaciones":"No tiene"}');
+INSERT INTO `Sportswear_Store`.`Producto` (`Precio`, `Imagen_producto`, `Tipo`, `Tipo_Articulo`, `Seccion_Articulo`, `Cantidad_Articulo`, `Especificaciones_Articulo`, 'Productos_paquete') VALUES
+(50.00, 'imagen1.jpg', 'Articulo', 'Camisa', 'Hombre', 100, '{"XS":20, "S":20, "M":20, "L":20, "XL":20}', NULL),
+(35.00, 'imagen2.jpg', 'Articulo', 'Pantalon', 'Mujer', 80, '{"4":10, "6":30, "8":10, "10":15, "12":10, "14":5}', NULL),
+(20.00, 'imagen3.jpg', 'Articulo', 'Gorra', 'Niño', 120, '{"12 meses":5, "18 meses":10, "24 meses":10, "36 meses":15,"4 años":30, "6 años":25, "8-12 años":25}', NULL),
+(45.00, 'imagen4.jpg', 'Diseno', NULL, NULL, 90,'{"Especificaciones":"No tiene"}', NULL),
+(60.00, 'imagen5.jpg', 'Diseno', NULL, NULL, 70, '{"Especificaciones":"No tiene"}', NULL),
+(25.00, 'imagen6.jpg', 'Articulo', 'Zapatillas', 'Niño', 110, '{"20":5, "21":10, "22":15, "23":10, "24":10, "25":15, "26":10, "27":5, "28":20, "29":5, "30":5}', NULL),
+(40.00, 'imagen7.jpg', 'Articulo', 'Polo', 'Hombre', 95, '{"XS":10, "S":20, "M":30, "L":20, "XL":15}', NULL),
+(55.00, 'imagen8.jpg', 'Diseno', NULL, NULL, 75, '{"Especificaciones":"No tiene"}', NULL),
+(30.00, 'imagen9.jpg', 'Articulo', 'Calcetines', 'Niño', 130, '{"2-4":60, "4-6":40, "6-8":30}', NULL),
+(65.00, 'imagen10.jpg', 'Diseno', NULL, NULL, 85, '{"Especificaciones":"No tiene"}', NULL);
 
 INSERT INTO `Sportswear_Store`.`Contiene` (`Producto_Identificacion`, `Compra_ID_compra`, `Cantidad`, `Especificaciones`) VALUES
 (1, 1, 2, '{"M":2}'),
@@ -81,27 +81,3 @@ INSERT INTO `Sportswear_Store`.`Contiene` (`Producto_Identificacion`, `Compra_ID
 (8, 8, 3, '{"Especificaciones":"No tiene"}'),
 (9, 9, 1, '{"6-8":1}'),
 (10, 10, 2, '{"Especificaciones":"No tiene"}');
-
-INSERT INTO `Sportswear_Store`.`Paquete` (`Precio`) VALUES
-(80.00),
-(95.00),
-(110.00),
-(125.00),
-(140.00),
-(155.00),
-(170.00),
-(185.00),
-(200.00),
-(215.00);
-
-INSERT INTO `Sportswear_Store`.`Almacena` (`Producto_Identificacion`, `Paquete_ID_paquete`) VALUES
-(1, 1),
-(2, 1),
-(3, 3),
-(2, 3),
-(5, 2),
-(6, 2),
-(7, 2),
-(8, 4),
-(9, 4),
-(10, 4);
