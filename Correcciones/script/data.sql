@@ -58,7 +58,7 @@ INSERT INTO `Sportswear_Store`.`Envio` (`Direccion`, `Fecha_envio`, `Codigo_post
 ('Carrera 9 #2021', '2024-03-09', 90123, 9, 9),
 ('Calle 10 #2223', '2024-03-10', 12345, 10, 10);
 
-INSERT INTO `Sportswear_Store`.`Producto` (`Precio`, `Imagen_producto`, `Tipo`, `Tipo_Articulo`, `Seccion_Articulo`, `Cantidad_Articulo`, `Especificaciones_Articulo`, 'Productos_paquete') VALUES
+INSERT INTO `Sportswear_Store`.`Producto` (`Precio`, `Imagen_producto`, `Tipo`, `Tipo_Articulo`, `Seccion_Articulo`, `Cantidad_Articulo`, `Especificaciones_Articulo`, `Productos_paquete`) VALUES
 (50.00, 'imagen1.jpg', 'Articulo', 'Camisa', 'Hombre', 100, '{"XS":20, "S":20, "M":20, "L":20, "XL":20}', NULL),
 (35.00, 'imagen2.jpg', 'Articulo', 'Pantalon', 'Mujer', 80, '{"4":10, "6":30, "8":10, "10":15, "12":10, "14":5}', NULL),
 (20.00, 'imagen3.jpg', 'Articulo', 'Gorra', 'Niño', 120, '{"12 meses":5, "18 meses":10, "24 meses":10, "36 meses":15,"4 años":30, "6 años":25, "8-12 años":25}', NULL),

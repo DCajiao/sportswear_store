@@ -1,0 +1,4 @@
+# Este archivo sirve para que en los commits se ignoren los archivos que no queremos subir al repositorio
+
+.vscode/
+./Correcciones/workbench/MR_Sportswear_store.mwb.bak
