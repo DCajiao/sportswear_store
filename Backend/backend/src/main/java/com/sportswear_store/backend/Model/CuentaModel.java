@@ -9,7 +9,6 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.sportswear_store.backend.Model.Tipo;
 
 @Entity
 @Table(name= "Cuenta")
@@ -24,6 +23,5 @@ public class CuentaModel {
     @Column(name="Tipo")
     @Enumerated(EnumType.STRING)
     private Tipo tipo;
-    
     private String Contraseña;
 }

@@ -5,6 +5,8 @@ import java.util.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,6 +22,8 @@ public class CompraModel {
     private Integer ID_compra;
     private BigDecimal Costo_total;
     private Date Fecha_compra;
-    
+    @ManyToOne
+    @JoinColumn(name="Cuenta_Usuario")
+    private CuentaModel Cuenta_Usuario;
 }
 
