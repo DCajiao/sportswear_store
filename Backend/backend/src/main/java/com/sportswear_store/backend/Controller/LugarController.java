@@ -15,27 +15,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sportswear_store.backend.Exception.RecursoNoEncontradoException;
-import com.sportswear_store.backend.Model.PersonaModel;
-import com.sportswear_store.backend.Service.IPersonaService;
+import com.sportswear_store.backend.Model.LugarModel;
+import com.sportswear_store.backend.Service.ILugarService;
 
 @RestController
-@RequestMapping ("sportswear_store/personas")
-public class PersonaController {
+@RequestMapping ("sportswear_store/lugar")
+public class LugarController {
     
     @Autowired
-    IPersonaService personaService;
-    
+    ILugarService lugarService;
+
     @PostMapping ("/post")
-    public ResponseEntity<String> crearPersona(@RequestBody PersonaModel Persona){
-        personaService.guardarPersona(Persona);
-        return new ResponseEntity<String>(personaService.guardarPersona(Persona), HttpStatus.OK);
+    public ResponseEntity<String> crearLugar(@RequestBody LugarModel Lugar){
+        lugarService.guardarLugar(Lugar);
+        return new ResponseEntity<String>(lugarService.guardarLugar(Lugar), HttpStatus.OK);
     }
 
     @GetMapping("/getById")
-    public ResponseEntity<?> buscarPersonaPorId(@PathVariable int Identificacion){
+    public ResponseEntity<?> buscarLugarPorId(@PathVariable int Codigo){
         try {
-            PersonaModel persona = personaService.buscarPersonaporId(Identificacion);
-            return ResponseEntity.ok(persona);
+            LugarModel lugar = lugarService.buscarLugarporId(Codigo);
+            return ResponseEntity.ok(lugar);
         } catch (RecursoNoEncontradoException e) {
             String mensajeError = e.getMessage();
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(mensajeError);
@@ -43,15 +43,15 @@ public class PersonaController {
     }
 
     @GetMapping("/getAll")
-    public ResponseEntity<List<PersonaModel>> listarPersonas(){
-        List<PersonaModel> personas = personaService.listarPersonas();
-        return new ResponseEntity<List<PersonaModel>>(personas, HttpStatus.OK);
+    public ResponseEntity<List<LugarModel>> listarLugares(){
+        List<LugarModel> lugares = lugarService.listarLugares();
+        return new ResponseEntity<List<LugarModel>>(lugares, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete")
-    public ResponseEntity<?> eliminarPersonaPorId(@PathVariable int Identificacion){
+    public ResponseEntity<?> eliminarLugarPorId(@PathVariable int Codigo){
         try {
-            personaService.eliminarPersonaPorId(Identificacion);
+            lugarService.eliminarLugarPorId(Codigo);
             return ResponseEntity.ok().build();
         } catch (RecursoNoEncontradoException e){
             String mensajeError = e.getMessage();
@@ -60,13 +60,12 @@ public class PersonaController {
    }
 
    @PutMapping("/put")
-   public ResponseEntity<?> actualizarPersona(@PathVariable int Identificacion, @RequestBody PersonaModel persona) {
-       Object personaActualizada = personaService.actualizarPersona(Identificacion, persona);
-       if (personaActualizada != null) {
-           return ResponseEntity.ok().body(personaActualizada);
+   public ResponseEntity<?> actualizarLugar(@PathVariable int Codigo, @RequestBody LugarModel lugar) {
+       Object lugarActualizado = lugarService.actualizarLugar(Codigo, lugar);
+       if (lugarActualizado != null) {
+           return ResponseEntity.ok().body(lugarActualizado);
        } else {
-           return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Persona no encontrada");
+           return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Lugar no encontrado");
        }
    }
-
 }

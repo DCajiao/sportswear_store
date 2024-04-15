@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,5 +27,8 @@ public class PersonaModel {
     @Column(name = "Genero")
     @Enumerated(EnumType.STRING) //Implementacion del ENUM de MySQL
     private Genero Genero;
-    private Integer Edad;    
+    private Integer Edad;
+    @ManyToOne // Relacion de esta tabla con la tabla de lugar
+    @JoinColumn(name = "Codigo")
+    private LugarModel Lugar_Codigo;  
 }
