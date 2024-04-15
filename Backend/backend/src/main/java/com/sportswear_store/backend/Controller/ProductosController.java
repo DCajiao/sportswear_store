@@ -19,7 +19,7 @@ import com.sportswear_store.backend.Model.ProductosModel;
 import com.sportswear_store.backend.Service.IProductosService;
 
 @RestController
-@RequestMapping ("/back/nat/productos")
+@RequestMapping ("/productos")
 public class ProductosController {
     @Autowired 
     IProductosService productosService;
