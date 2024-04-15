@@ -9,6 +9,6 @@ public interface IProductosService {
     String guardarProducto(ProductosModel producto);
     ProductosModel buscarProductoPorId(int Identificacion);
     List<ProductosModel> listarProductos();
-    void eliminarProductoPorId(int Identificacion);
-    ProductosModel actualizarProducto(int Identificacion, ProductosModel productoNuevo);
+    String eliminarProductoPorId(int Identificacion);
+    String actualizarProducto(int Identificacion, ProductosModel productoNuevo);
 }

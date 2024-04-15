@@ -55,7 +55,7 @@ public class ProductosController {
    }
    @PutMapping("/{id}")
     public ResponseEntity<?> actualizarProducto(@PathVariable("id") int getIdentificacion, @RequestBody ProductosModel producto) {
-        ProductosModel productoActualizado = productosService.actualizarProducto(getIdentificacion, producto);
+        Object productoActualizado = productosService.actualizarProducto(getIdentificacion, producto);
         if (productoActualizado != null) {
             return ResponseEntity.ok().body(productoActualizado);
         } else {

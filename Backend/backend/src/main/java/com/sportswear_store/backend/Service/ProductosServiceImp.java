@@ -30,16 +30,17 @@ public class ProductosServiceImp implements IProductosService{
         return productosRepository.findAll();
     }
     @Override
-    public void eliminarProductoPorId(int Identificacion) {
+    public String eliminarProductoPorId(int Identificacion) {
         Optional<ProductosModel> productoEncontrado = productosRepository.findById(Identificacion);
         if (productoEncontrado.isPresent()){
             productosRepository.delete(productoEncontrado.get());
+            return ("El producto "+Identificacion+"fue eliminado con exito");
         } else {
             throw new RecursoNoEncontradoException("Producto no encontrado con el Id "+Identificacion);
         }
     }
     @Override
-    public ProductosModel actualizarProducto(int Identificacion, ProductosModel productoNuevo) {
+    public String actualizarProducto(int Identificacion, ProductosModel productoNuevo) {
         Optional<ProductosModel> productoEncontrado = productosRepository.findById(Identificacion);
         if (productoEncontrado.isPresent()) {
             ProductosModel producto = productoEncontrado.get();
@@ -47,9 +48,10 @@ public class ProductosServiceImp implements IProductosService{
             producto.setTipo(productoNuevo.getTipo());
             producto.setEspecificaciones(productoNuevo.getEspecificaciones());
             producto.setCantidad(productoNuevo.getCantidad());
-            return productosRepository.save(producto);
+            productosRepository.save(producto);
+            return ("El producto " + Identificacion + " fue actualizado con éxito");
         } else {
-            return null;
+            return ("No se pudo encontrar el producto con el Identificador " + Identificacion);
         }
     }
     
