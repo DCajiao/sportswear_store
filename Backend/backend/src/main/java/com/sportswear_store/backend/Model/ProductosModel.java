@@ -21,9 +21,9 @@ public class ProductosModel {
     private Integer Identificacion;
     private Float precio;
     private String Imagen_producto;
-    @Column(name = "Tipo")
+    @Column(name = "Tipo_Producto")
     @Enumerated(EnumType.STRING)
-    private Tipo Tipo;
+    private TipoProducto Tipo;
     @Column(name="Tipo_Articulo")
     @Enumerated(EnumType.STRING)
     private TipoArticulo Tipo_Articulo;
