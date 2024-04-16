@@ -23,7 +23,7 @@ public class ProductosModel {
     private String Imagen_producto;
     @Column(name = "Tipo")
     @Enumerated(EnumType.STRING)
-    private Tipo Tipo;
+    private TipoArticulo Tipo;
     @Column(name="Tipo_Articulo")
     @Enumerated(EnumType.STRING)
     private TipoArticulo Tipo_Articulo;
