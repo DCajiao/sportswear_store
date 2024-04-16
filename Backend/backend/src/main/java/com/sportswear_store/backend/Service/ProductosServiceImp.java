@@ -45,8 +45,8 @@ public class ProductosServiceImp implements IProductosService{
         if (productoEncontrado.isPresent()) {
             ProductosModel producto = productoEncontrado.get();
             producto.setPrecio(productoNuevo.getPrecio());
-            producto.setTipo(productoNuevo.getTipo());
-            producto.setEspecificaciones(productoNuevo.getEspecificaciones());
+            producto.setTipo_Articulo(productoNuevo.getTipo_Articulo());
+            producto.setEspecificaciones_Articulo(productoNuevo.getEspecificaciones_Articulo());
             producto.setCantidad(productoNuevo.getCantidad());
             productosRepository.save(producto);
             return ("El producto " + Identificacion + " fue actualizado con éxito");

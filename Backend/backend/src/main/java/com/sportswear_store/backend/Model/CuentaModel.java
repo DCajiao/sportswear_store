@@ -22,6 +22,6 @@ public class CuentaModel {
     
     @Column(name="Tipo")
     @Enumerated(EnumType.STRING)
-    private Tipo tipo;
+    private TipoCuenta tipo;
     private String Contraseña;
 }

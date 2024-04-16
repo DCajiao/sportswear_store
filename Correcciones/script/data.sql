@@ -71,13 +71,13 @@ INSERT INTO `Sportswear_Store`.`Producto` (`Precio`, `Imagen_producto`, `Tipo_Pr
 (65.00, 'imagen10.jpg', 'Diseno', NULL, NULL, 85, NULL, NULL, false);
 
 INSERT INTO `Sportswear_Store`.`Contiene` (`Producto_Identificacion`, `Compra_ID_compra`, `Cantidad`, `Especificaciones`) VALUES
-(1, 1, 2, '{"M":2}'),
-(2, 2, 3, '{"10":3}'),
-(3, 3, 1, '{"4 Anos":1}'),
+(1, 1, 2, '[{"Talla":"M","Cantidad":2}]'),
+(2, 2, 3, '[{"Talla":"10","Cantidad":3}]'),
+(3, 3, 1, '[{"Talla":"4 Anos","Cantidad":1}]'),
 (4, 4, 2, NULL),
-(1, 5, 3, '{"L":2, "S":1}'),
-(6, 6, 1, '{"22":1}'),
-(7, 7, 2, '{"XL":2}'),
+(1, 5, 3, '[{"Talla":"L","Cantidad":2},{"Talla":"S","Cantidad":1}]'),
+(6, 6, 1, '[{"Talla":"22","Cantidad":1}]'),
+(7, 7, 2, '[{"Talla":"XL","Cantidad":2}]'),
 (8, 8, 3, NULL),
-(9, 9, 1, '{"6-8":1}'),
+(9, 9, 1, '[{"Talla":"6-8","Cantidad":1}]'),
 (10, 10, 2, NULL);

@@ -30,8 +30,7 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Lugar` (
   CONSTRAINT `fk_Lugar_Lugar1`
     FOREIGN KEY (`Lugar_Codigo`)
     REFERENCES `Sportswear_Store`.`Lugar` (`Codigo`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+)
 ENGINE = InnoDB;
 
 
@@ -51,8 +50,7 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Persona` (
   CONSTRAINT `fk_Persona_Lugar1`
     FOREIGN KEY (`Lugar_Codigo`)
     REFERENCES `Sportswear_Store`.`Lugar` (`Codigo`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+)
 ENGINE = InnoDB;
 
 
@@ -69,8 +67,7 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Cuenta` (
   CONSTRAINT `fk_Cuenta_Usuario1`
     FOREIGN KEY (`Usuario_Identificacion`)
     REFERENCES `Sportswear_Store`.`Persona` (`Identificacion`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+)
 ENGINE = InnoDB;
 
 
@@ -87,8 +84,7 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Compra` (
   CONSTRAINT `fk_Compra_Cuenta1`
     FOREIGN KEY (`Cuenta_Usuario`)
     REFERENCES `Sportswear_Store`.`Cuenta` (`Usuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+)
 ENGINE = InnoDB;
 
 
@@ -107,14 +103,11 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Envio` (
   INDEX `fk_Envio_Lugar1_idx` (`Lugar_Codigo` ASC) VISIBLE,
   CONSTRAINT `fk_Envio_Compra1`
     FOREIGN KEY (`Compra_ID_compra`)
-    REFERENCES `Sportswear_Store`.`Compra` (`ID_compra`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    REFERENCES `Sportswear_Store`.`Compra` (`ID_compra`),
   CONSTRAINT `fk_Envio_Lugar1`
     FOREIGN KEY (`Lugar_Codigo`)
     REFERENCES `Sportswear_Store`.`Lugar` (`Codigo`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+)
 ENGINE = InnoDB;
 
 
@@ -152,12 +145,12 @@ CREATE TABLE IF NOT EXISTS `Sportswear_Store`.`Contiene` (
     REFERENCES `Sportswear_Store`.`Producto` (`Identificacion`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Producto_has_Compra_Compra1`
+  CONSTRAINT `fk_Producto_has_Compra_Compra2` -- Changed the constraint name to make it unique
     FOREIGN KEY (`Compra_ID_compra`)
     REFERENCES `Sportswear_Store`.`Compra` (`ID_compra`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+)
 ENGINE = InnoDB;
+
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
