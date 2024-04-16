@@ -22,7 +22,8 @@
 					<li><a href="#intro">Bienvenido</a></li>
 					<li><a href="#one">Crear Compra</a></li>
 					<li><a href="#two">Seleccionar Productos</a></li>
-					<li><a href="#three">Guardar</a></li>
+					<li><a href="#three">Seleccionar Envío</a></li>
+					<li><a href="#four">Confirmación</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -34,7 +35,8 @@
 		<!-- Intro -->
 		<section id="intro" class="wrapper style1 fullscreen fade-up">
 			<div class="inner">
-				<a href="#" class="image" ><img src="images/bolsa-de-la-compra.png" style="height: 200px !important;"alt="" data-position="center center" /></a>
+				<img src="images/bolsa-de-la-compra.png" class="image" style="height: 200px !important;"
+						alt="" data-position="center center" />
 				<h1>Sportswear Store</h1>
 				<p>Esta es una página interactiva para probar el Backend en <br> Java para el proyecto <a
 						href="https://github.com/DCajiao/sportswear_store">sportswear_store</a>
@@ -48,178 +50,103 @@
 		<!-- One -->
 		<section id="one" class="wrapper style2 spotlights">
 			<section>
-				<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+				<img src="images/carrito-de-compras.png" alt=""
+						data-position="center center" class="image" />
 				<div class="content">
 					<div class="inner">
-						<h2>Sed ipsum dolor</h2>
-						<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies
-							erat malesuada quis. Aliquam dapibus.</p>
+						<h2>Inicia tu compra</h2>
+						<p>Para inicializar tu proceso de compra presiona el siguiente botón</p>
 						<ul class="actions">
-							<li><a href="generic.html" class="button">Learn more</a></li>
+							<button id="iniciarCompraBtn">Iniciar</button>
 						</ul>
+						<blockquote>Crea un POST a tabla compra para generar un registro</blockquote>
 					</div>
 				</div>
+
 			</section>
-			<section>
-				<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Feugiat consequat</h2>
-						<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies
-							erat malesuada quis. Aliquam dapibus.</p>
-						<ul class="actions">
-							<li><a href="generic.html" class="button">Learn more</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section>
-				<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Ultricies aliquam</h2>
-						<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies
-							erat malesuada quis. Aliquam dapibus.</p>
-						<ul class="actions">
-							<li><a href="generic.html" class="button">Learn more</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
+			<br><br><br><br><br><br><br><br><br><br>
 		</section>
 
 		<!-- Two -->
 		<section id="two" class="wrapper style3 fade-up">
 			<div class="inner">
-				<h2>What we do</h2>
-				<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat
-					malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet
-					imperdiet est velit quis lorem.</p>
-				<div class="features">
-					<section>
-						<span class="icon solid major fa-code"></span>
-						<h3>Lorem ipsum amet</h3>
-						<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
-							ultricies erat dapibus.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-lock"></span>
-						<h3>Aliquam sed nullam</h3>
-						<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
-							ultricies erat dapibus.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-cog"></span>
-						<h3>Sed erat ullam corper</h3>
-						<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
-							ultricies erat dapibus.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-desktop"></span>
-						<h3>Veroeros quis lorem</h3>
-						<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
-							ultricies erat dapibus.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-link"></span>
-						<h3>Urna quis bibendum</h3>
-						<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
-							ultricies erat dapibus.</p>
-					</section>
-					<section>
-						<span class="icon major fa-gem"></span>
-						<h3>Aliquam urna dapibus</h3>
-						<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
-							ultricies erat dapibus.</p>
-					</section>
-				</div>
+				<h2>Selección de productos</h2>
+				<p>Aquí podrás ver los productos que tenemos disponibles</p>
+				<h2>Tabla de Productos</h2>
+
+				<table id="product">
+					<thead>
+						<tr>
+							<th>Precio</th>
+							<th>Imagen</th>
+							<th>Tipo</th>
+							<th>Nombre</th>
+							<th>Seccion</th>
+							<th>Cantidad</th>
+							<th>Especificaciones</th>
+							<th>Paquete</th>
+						</tr>
+					</thead>
+					<tbody id="productos">
+						<!-- Aquí se agregarán las filas dinámicamente -->
+					</tbody>
+				</table>
+
+
 				<ul class="actions">
-					<li><a href="generic.html" class="button">Learn more</a></li>
+					<button id="" class="button">Consultar productos</button>
 				</ul>
 			</div>
-		</section>
-
-		<section>
-			<div class="container">
-				<h2>Iniciar Sesión</h2>
-				<form id="loginForm">
-					<div class="form-group">
-						<label for="username">Usuario:</label>
-						<input type="text" id="username" name="username" required>
-					</div>
-					<div class="form-group">
-						<label for="password">Contraseña:</label>
-						<input type="password" id="password" name="password" required>
-					</div>
-					<button type="submit">Iniciar Sesión</button>
-				</form>
-			</div>
-			<script src="../script.js"></script>
 		</section>
 
 		<!-- Three -->
 		<section id="three" class="wrapper style1 fade-up">
 			<div class="inner">
-				<h2>Get in touch</h2>
-				<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat
-					malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet
-					imperdiet est velit quis lorem.</p>
+				<h2>Información de Envío</h2>
+				<p>Digita la Información de envío para que tu compra sea llevada a domicilio</p>
 				<div class="split style1">
-					<section>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" />
-								</div>
-								<div class="field half">
-									<label for="email">Email</label>
-									<input type="text" name="email" id="email" />
-								</div>
-								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="5"></textarea>
-								</div>
+					<section> 
+						<form id="envioForm">
+							<div>
+								<label for="direccion">Direccion:</label>
+								<input type="text" id="direccion" name="direccion" required >
 							</div>
-							<ul class="actions">
-								<li><a href="" class="button submit">Send Message</a></li>
-							</ul>
+							<div>
+								<label for="Fecha_Envio">Fecha_Envio:</label>
+								<input type="date" id="Fecha_Envio" name="Fecha_Envio" required style="color: black !important;">
+							</div>
+							<br>
+							<div>
+								<label for="codigopostal">Codigo Postal:</label>
+								<input type="number" id="codigopostal" name="codigopostal" step="0.01" required style="color: black !important;">
+							</div>
+							<br>
+							<div>
+								<label for="precio">id_compra</label>
+								<input type="number" id="precio" name="precio" step="0.01" required style="color: black !important;">
+							</div>
+							<br>
+							<div>
+								<label for="precio">id_lugar</label>
+								<input type="number" id="precio" name="precio" step="0.01" required style="color: black !important;">
+							</div>
+							<br>
+							<button type="submit">Agregar Envio</button>
 						</form>
 					</section>
-					<section>
-						<ul class="contact">
-							<li>
-								<h3>Address</h3>
-								<span>12345 Somewhere Road #654<br />
-									Nashville, TN 00000-0000<br />
-									USA</span>
-							</li>
-							<li>
-								<h3>Email</h3>
-								<a href="#">user@untitled.tld</a>
-							</li>
-							<li>
-								<h3>Phone</h3>
-								<span>(000) 000-0000</span>
-							</li>
-							<li>
-								<h3>Social</h3>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span
-												class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span
-												class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a>
-									</li>
-									<li><a href="#" class="icon brands fa-instagram"><span
-												class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-linkedin-in"><span
-												class="label">LinkedIn</span></a></li>
-								</ul>
-							</li>
-						</ul>
-					</section>
 				</div>
+			</div>
+		</section>
+
+		<!-- Four -->
+		<section id="four" class="wrapper style1 fade-up">
+			<div class="inner">
+				<h2>¿Estás seguro de realizar tu compra?</h2>
+				<p>Aquí puedes cancelar o confirmar tu compra</p>
+				<ul class="actions">
+					<button class="button submit" style="background-color: green !important;">Confirmar</button>
+					<button class="button submit" style="background-color: red !important;">Cancelar</button>
+				</ul>
 			</div>
 		</section>
 
@@ -243,6 +170,9 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+
+	<!-- Script para CRUDS-->
+	<script src="crud_script.js"></script>
 
 </body>
 
