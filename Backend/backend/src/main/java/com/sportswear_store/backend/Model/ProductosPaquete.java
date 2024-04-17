@@ -1,15 +1,10 @@
 package com.sportswear_store.backend.Model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-@NoArgsConstructor
+
+@Data
 public class ProductosPaquete {
-    @JsonProperty("IdProducto")
     private Integer IdProducto;
 }

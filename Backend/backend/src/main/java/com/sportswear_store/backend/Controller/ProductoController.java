@@ -24,7 +24,7 @@ public class ProductoController {
     
     @Autowired 
     IProductoService productoService;
-    @GetMapping("/{id}")
+    @GetMapping("/{Identificacion}")
     public ResponseEntity<?> buscarProductoPorId(@PathVariable int Identificacion){
         try {
             ProductoModel producto = productoService.buscarProductoPorId(Identificacion);
