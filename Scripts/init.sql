@@ -14,7 +14,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema sportswear_store
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `sportswear_store` DEFAULT CHARACTER SET utf8 ;
+CREATE SCHEMA IF NOT EXISTS `sportswear_store` DEFAULT CHARACTER SET utf8mb4 ;
 USE `sportswear_store` ;
 
 -- -----------------------------------------------------
@@ -128,21 +128,21 @@ ENGINE = InnoDB;
 -- Table `sportswear_store`.`Contiene`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sportswear_store`.`Contiene` (
+  `ID_contiene` INT NOT NULL AUTO_INCREMENT,
   `Producto_Identificacion` INT NOT NULL,
   `Compra_ID_compra` INT NOT NULL,
   `Cantidad` INT NOT NULL,
   `Especificaciones` JSON NULL,
-  PRIMARY KEY (`Producto_Identificacion`,`Compra_ID_compra`),
   INDEX `fk_Producto_has_Compra_Compra1_idx` (`Compra_ID_compra` ASC),
   INDEX `fk_Producto_has_Compra_Producto1_idx` (`Producto_Identificacion` ASC),
-  CONSTRAINT `fk_Producto_has_Compra_Producto1`
-    FOREIGN KEY (`Producto_Identificacion`)
-    REFERENCES `sportswear_store`.`Producto` (`Identificacion`),
-  CONSTRAINT `fk_Producto_has_Compra_Compra1`
-    FOREIGN KEY (`Compra_ID_compra`)
-    REFERENCES `sportswear_store`.`Compra` (`ID_compra`))
+  PRIMARY KEY (`ID_contiene`),
+  CONSTRAINT fk_Producto_has_Compra_Producto1
+    FOREIGN KEY (Producto_Identificacion)
+    REFERENCES Sportswear_Store.Producto (Identificacion),
+  CONSTRAINT fk_Producto_has_Compra_Compra1
+    FOREIGN KEY (Compra_ID_compra)
+    REFERENCES Sportswear_Store.Compra (ID_compra))
 ENGINE = InnoDB;
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
