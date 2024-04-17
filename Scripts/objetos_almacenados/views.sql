@@ -1,8 +1,8 @@
 -- Vista de los productos disponibles junto con su cantidad en stock
 CREATE VIEW ProductosDisponibles AS
-SELECT Identificacion, Precio, Tipo, Tipo_Articulo, Seccion, Cantidad
+SELECT Identificacion, Precio, Tipo_Producto, Tipo_Articulo, Seccion_Articulo, Cantidad_Articulo
 FROM Producto
-WHERE Cantidad > 0;
+WHERE Cantidad_Articulo > 0;
 
 -- ¿Cómo llamar la vista?
 -- SELECT * FROM ProductosDisponibles;
@@ -26,7 +26,7 @@ GROUP BY p.Identificacion;
 -- -----------------------------------------------------
 -- Vista de Cantidad de ejemplares de un producto 
 CREATE VIEW Vista_Cantidad_Ejemplares AS
-SELECT Identificacion AS Producto_ID, Cantidad, Tipo_Articulo AS Cantidad_Ejemplares
+SELECT Identificacion AS Producto_ID, Cantidad_Articulo, Tipo_Articulo AS Ejemplares
 FROM Producto;
 
 -- ¿Cómo llamarlo?
