@@ -1,14 +1,24 @@
-INSERT INTO Sportswear_Store.Lugar (Nombre, Lugar_Codigo) VALUES
-('Cali', 1),
-('Medenin', 2),
-('Cucuta', 3),
-('Pasto', 4),
-('Bogota', 5),
-('Buga', 6),
-('Tulua', 7),
-('Santa Marta', 8),
-('Ibague', 9),
-('Manizales', 10);
+INSERT INTO `Sportswear_Store`.`Lugar` (`Nombre`, `Lugar_Codigo`) VALUES
+('Bogotá', 1),
+('Medellín', 2),
+('Cali', 3),
+('Barranquilla', 4),
+('Cartagena', 5),
+('Cúcuta', 6),
+('Bucaramanga', 7),
+('Pereira', 8),
+('Santa Marta', 9),
+('Ibagué', 10),
+('Bello', 11),
+('Soledad', 12),
+('Villavicencio', 13),
+('Soacha', 14),
+('Manizales', 15),
+('Pasto', 16),
+('Montería', 17),
+('Neiva', 18),
+('Palmira', 19),
+('Armenia', 20);
 
 INSERT INTO Sportswear_Store.Persona (Nombre, Correo, Telefono, Genero, Edad, Lugar_Codigo) VALUES
 ('Juan', 'juan@example.com', '123456789', 'Hombre', 25, 2),
