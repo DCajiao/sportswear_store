@@ -18,9 +18,6 @@ Este repositorio contiene el diseño del backend, centrado primordialmente en la
 
 ---
 
-## 🔍 Análisis sobre el Universo del Discurso
-
-
 ## 🗂️ MER
 
 ![MER-diagrama-png](https://github.com/DCajiao/sportswear_store/blob/main/db_diagrams/MER.png?raw=true)
@@ -33,9 +30,9 @@ Este repositorio contiene el diseño del backend, centrado primordialmente en la
 
 ## 📝 Scripts:
 
-[Archivo SQL db](https://github.com/DCajiao/sportswear_store/blob/main/Scripts/init.sql)
+[Archivo de sustentación](https://github.com/DCajiao/sportswear_store/blob/main/SustentacionProyectoSportswearStore.pdf)
 
-[Archivo SQL data](https://github.com/DCajiao/sportswear_store/blob/main/Scripts/data.sql)
+[Archivo SQL db_initializer](https://github.com/DCajiao/sportswear_store/blob/main/Scripts/db_initializer.sql)
 
 [Archivo SQL querys](https://github.com/DCajiao/sportswear_store/blob/main/Scripts/query.sql)
 

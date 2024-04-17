@@ -50,6 +50,7 @@ WHERE C.Costo_total = (
 
 -- CONSULTA ANIDADA -->
 -- ¿Cuál es la sección con el precio promedio más alto por artículo vendido?
+-- Este da NULL ya que el articulo más comprado es un Diseño y estos no tienen Sección
 SELECT p.Seccion_Articulo, AVG(p.Precio) AS PrecioPromedio 
 FROM producto AS p 
 JOIN contiene AS c ON p.Identificacion = c.Producto_Identificacion 
