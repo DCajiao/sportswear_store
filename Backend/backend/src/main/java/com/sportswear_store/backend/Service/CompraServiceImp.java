@@ -4,12 +4,14 @@ import java.util.Optional;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.sportswear_store.backend.Exception.CompraNoEncontradaException;
 
 import com.sportswear_store.backend.Model.CompraModel;
 import com.sportswear_store.backend.Repository.ICompraRepository;
 
+@Service
 public class CompraServiceImp implements ICompraService{
     @Autowired ICompraRepository compraRepository;
     @Override
@@ -41,13 +43,13 @@ public class CompraServiceImp implements ICompraService{
 
     @Override
     public String actualizarCompra(int ID_compra, CompraModel compraNuevo){
-    Optional<CompraModel> compraEncontrada = compraRepository.findById(ID_compra);
-    if (compraEncontrada.isPresent()) {
-        CompraModel compra = compraEncontrada.get();
-        compra.setCosto_total(compraNuevo.getCosto_total());
-        compra.setFecha_compra(compraNuevo.getFecha_compra());
-        compra.setCuenta_Usuario(compraNuevo.getCuenta_Usuario());
-        compraRepository.save(compraNuevo);
+        Optional<CompraModel> compraEncontrada = compraRepository.findById(ID_compra);
+        if (compraEncontrada.isPresent()) {
+            CompraModel compra = compraEncontrada.get();
+            compra.setCosto_total(compraNuevo.getCosto_total());
+            compra.setFecha_compra(compraNuevo.getFecha_compra());
+            compra.setCuenta_Usuario(compraNuevo.getCuenta_Usuario());
+            compraRepository.save(compraNuevo);
         return("La compra " + ID_compra + " fue actualizado con exito");
     } else {
             return ("No se puede crear la compra con el Identificador " + ID_compra);

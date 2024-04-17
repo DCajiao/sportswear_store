@@ -26,7 +26,9 @@ public class ProductoModel {
 
     @Column(name="Tipo_Producto")
     @Enumerated(EnumType.STRING)
+
     private TipoProducto Tipo_producto;
+    private TipoArticulo Tipo;
 
     @Column(name="Tipo_Articulo")
     @Enumerated(EnumType.STRING)
