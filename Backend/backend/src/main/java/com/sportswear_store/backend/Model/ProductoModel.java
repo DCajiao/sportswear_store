@@ -17,35 +17,31 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class ProductosModel {
+public class ProductoModel {
     @Id
     private Integer Identificacion;
-
     private Float precio;
-
     private String Imagen_producto;
 
-    @Column(name = "Tipo_Producto")
+    @Column(name="Tipo_Producto")
     @Enumerated(EnumType.STRING)
-    private TipoProducto Tipo;
+    private TipoProducto Tipo_producto;
 
     @Column(name="Tipo_Articulo")
     @Enumerated(EnumType.STRING)
     private TipoArticulo Tipo_Articulo;
 
-    @Column(name = "Seccion")
+    @Column(name="Seccion_Articulo")
     @Enumerated(EnumType.STRING)
-    private Seccion Seccion;
+    private SeccionArticulo Seccion_Articulo;
 
-    private Integer Cantidad;
-    
-    @Column(name = "Productos_paquete", columnDefinition = "JSON")
-    private ArrayList<Productos_Paquete> Productos_paquete;
+    private Integer Cantidad_Articulo;
 
     @Column(name = "Especificaciones_Articulo", columnDefinition = "JSON")
-    private ArrayList<Especificaciones_Articulo> Especificaciones_Articulo;
+    private ArrayList<EspecificacionesArticulo> Especificaciones_Articulo;
 
-    @Column(name = "esPaquete")
+    @Column(name="Productos_paquete", columnDefinition = "JSON")
+    private ArrayList<ProductosPaquete> Productos_paquete;
+
     private Boolean esPaquete;
 }

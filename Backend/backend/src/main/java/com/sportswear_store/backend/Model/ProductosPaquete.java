@@ -9,8 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Productos_Paquete {
-    @JsonProperty("Producto_id")
-    private String Producto_id;
+public class ProductosPaquete {
+    @JsonProperty("IdProducto")
+    private Integer IdProducto;
 }
-

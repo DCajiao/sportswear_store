@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Especificaciones_Articulo {
+public class EspecificacionesArticulo {
     @JsonProperty("Talla")
     private String Talla;
 

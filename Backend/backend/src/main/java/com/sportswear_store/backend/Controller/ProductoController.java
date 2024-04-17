@@ -15,38 +15,39 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sportswear_store.backend.Exception.RecursoNoEncontradoException;
-import com.sportswear_store.backend.Model.ProductosModel;
-import com.sportswear_store.backend.Service.IProductosService;
+import com.sportswear_store.backend.Model.ProductoModel;
+import com.sportswear_store.backend.Service.IProductoService;
 
 @RestController
 @RequestMapping ("/productos")
-public class ProductosController {
+public class ProductoController {
+    
     @Autowired 
-    IProductosService productosService;
-    @PostMapping("/")
-    public ResponseEntity<String> crearProducto(@RequestBody ProductosModel producto){
-        productosService.guardarProducto(producto);
-        return new ResponseEntity<String>(productosService.guardarProducto(producto),HttpStatus.OK);
-    }
+    IProductoService productoService;
     @GetMapping("/{id}")
-   public ResponseEntity<?> buscarProductoPorId(@PathVariable int Identificacion){
+    public ResponseEntity<?> buscarProductoPorId(@PathVariable int Identificacion){
         try {
-            ProductosModel producto = productosService.buscarProductoPorId(Identificacion);
+            ProductoModel producto = productoService.buscarProductoPorId(Identificacion);
             return ResponseEntity.ok(producto);
         } catch (RecursoNoEncontradoException e) {
             String mensajeError=e.getMessage();
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(mensajeError);
         }
    }
-   @GetMapping("/")
-   public ResponseEntity<List<ProductosModel>> listarProductos(){
-        List<ProductosModel> productos = productosService.listarProductos();
-        return new ResponseEntity<List<ProductosModel>> (productos, HttpStatus.OK);
+   @PostMapping("/")
+    public ResponseEntity<String> crearProducto(@RequestBody ProductoModel producto){
+        productoService.guardarProducto(producto);
+        return new ResponseEntity<String>(productoService.guardarProducto(producto),HttpStatus.OK);
+    }
+    @GetMapping("/")
+   public ResponseEntity<List<ProductoModel>> listarProductos(){
+        List<ProductoModel> productos = productoService.listarProductos();
+        return new ResponseEntity<List<ProductoModel>>(productos, HttpStatus.OK);
    }
    @DeleteMapping("/{id}")
    public ResponseEntity<?> eliminarProductoPorId(@PathVariable int getIdentificacion){
     try {
-        productosService.eliminarProductoPorId(getIdentificacion);
+        productoService.eliminarProductoPorId(getIdentificacion);
         return ResponseEntity.ok().build();
     } catch (RecursoNoEncontradoException e){
         String mensajeError = e.getMessage();
@@ -54,12 +55,14 @@ public class ProductosController {
     }
    }
    @PutMapping("/{id}")
-    public ResponseEntity<?> actualizarProducto(@PathVariable("id") int getIdentificacion, @RequestBody ProductosModel producto) {
-        Object productoActualizado = productosService.actualizarProducto(getIdentificacion, producto);
+    public ResponseEntity<?> actualizarProducto(@PathVariable("id") int getIdentificacion, @RequestBody ProductoModel producto) {
+        Object productoActualizado = productoService.actualizarProducto(getIdentificacion, producto);
         if (productoActualizado != null) {
             return ResponseEntity.ok().body(productoActualizado);
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Producto no encontrado");
         }
     }
+
+
 }
