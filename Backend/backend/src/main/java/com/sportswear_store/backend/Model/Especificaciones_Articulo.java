@@ -14,6 +14,5 @@ public class Especificaciones_Articulo {
     private String Talla;
 
     @JsonProperty("Cantidad")
-    private int Cantidad;
-    
+    private Integer Cantidad;
 }
