@@ -11,7 +11,7 @@ RETURNS INT
 READS SQL DATA
 BEGIN
     DECLARE cantidad_disponible INT;
-    SELECT Cantidad INTO cantidad_disponible
+    SELECT Cantidad_Articulo INTO cantidad_disponible
     FROM Producto
     WHERE Identificacion = p_identificacion;
     RETURN cantidad_disponible;
