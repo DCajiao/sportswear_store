@@ -1,5 +1,7 @@
 package com.sportswear_store.backend.Model;
 
+import java.util.ArrayList;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -11,25 +13,36 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table (name="usuario")
+@Table (name="producto")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class ProductosModel {
+public class ProductoModel {
     @Id
     private Integer Identificacion;
     private Float precio;
     private String Imagen_producto;
-    @Column(name = "Tipo_Producto")
+
+
+    @Column(name="Tipo_Producto")
     @Enumerated(EnumType.STRING)
-    private TipoProducto Tipo;
+    private TipoProducto Tipo_producto;
+
     @Column(name="Tipo_Articulo")
     @Enumerated(EnumType.STRING)
     private TipoArticulo Tipo_Articulo;
-    @Column(name = "Seccion")
+
+    @Column(name="Seccion_Articulo")
     @Enumerated(EnumType.STRING)
-    private Seccion Seccion;
-    private Integer Cantidad;
-    private String Especificaciones;
+    private SeccionArticulo Seccion_Articulo;
+
+    private Integer Cantidad_Articulo;
+
+    @Column(name = "Especificaciones_Articulo", columnDefinition = "JSON")
+    private ArrayList<EspecificacionesArticulo> Especificaciones_Articulo;
+
+    @Column(name="Productos_paquete", columnDefinition = "JSON")
+    private ArrayList<ProductosPaquete> Productos_paquete;
+
+    private Boolean esPaquete;
 }
