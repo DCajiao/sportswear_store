@@ -20,8 +20,8 @@ public class CuentaModel {
     @Id
     private String Usuario;
     
-    @Column(name="Tipo")
+    @Column(name="Tipo_Cuenta")
     @Enumerated(EnumType.STRING)
-    private Tipo tipo;
+    private TipoCuenta tipo;
     private String Contraseña;
 }
