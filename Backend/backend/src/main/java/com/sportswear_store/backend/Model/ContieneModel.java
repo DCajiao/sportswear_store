@@ -21,7 +21,7 @@ public class ContieneModel {
     @Id
     @ManyToOne
     @JoinColumn(name= "Producto_Identificacion")
-    private ProductosModel Producto_Identificacion;
+    private ProductoModel Producto_Identificacion;
 
     @Id
     @ManyToOne
