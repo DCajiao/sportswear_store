@@ -25,22 +25,10 @@ Este repositorio contiene el diseño del backend, centrado primordialmente en la
 
 ![MER-diagrama-png](https://github.com/DCajiao/sportswear_store/blob/main/db_diagrams/MER.png?raw=true)
 
-- [Diagrama completo](https://drive.google.com/file/d/1OhrWwU322MSNL48Lc3sZaY-cKv6n9IXW/view)
-
 
 ## 🧩 MR
 
 ![MR-diagrama-png](https://github.com/DCajiao/sportswear_store/blob/main/db_diagrams/MR.png?raw=true)
-
-- [Diagrama Completo](https://drive.google.com/file/d/18cunQ3gYTccL-rEyEJTIVkVz7Fbsw2J3/view?usp=sharing)
-
-- Observacion: Debido al MySQL Workbench, a la hora de exportar las imágenes no se logra apreciar muy bien el dominio de las columnas, pero sí en el script. Por ende, se clarificarán a continuación:
-    | Tabla    | Columna  | Dominio                           |
-    |----------|----------|-----------------------------------|
-    | Cuenta   | Tipo     | 'Cliente', 'Administrador'        |
-    | Usuario  | Genero   | 'Hombre', 'Mujer'                 |
-    | Producto | Tipo     | 'Articulo', 'Diseño'              |
-    | Producto | Seccion  | 'Hombre', 'Mujer', 'Niño'         |
 
 
 ## 📝 Scripts:
@@ -51,3 +39,8 @@ Este repositorio contiene el diseño del backend, centrado primordialmente en la
 
 [Archivo SQL querys](https://github.com/DCajiao/sportswear_store/blob/main/Scripts/query.sql)
 
+[Archivo SQL functions](https://github.com/DCajiao/sportswear_store/blob/main/Scripts/objetos_almacenados/functions.sql)
+
+[Archivo SQL triggers](https://github.com/DCajiao/sportswear_store/blob/main/Scripts/objetos_almacenados/triggers.sql)
+
+[Archivo SQL views](https://github.com/DCajiao/sportswear_store/blob/main/Scripts/views.sql)
